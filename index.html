@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nate's Door Service | Garage Door Installation & Repair | Kansas City</title>
+  <meta name="description" content="Kansas City's trusted garage door experts. Residential & commercial installation, repair, and spring replacement. 15+ years of experience. Call 816.289.9600 today." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand:       '#1d4ed8',
+            'brand-dark': '#1e3a8a',
+            'brand-mid':  '#3b82f6',
+            'brand-light':'#dbeafe',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Extra bottom padding so sticky bar never covers content */
+    body { padding-bottom: 80px; }
+
+    /* Hero: dark blue gradient layered over the action photo */
+    .hero-bg {
+      background:
+        linear-gradient(135deg, rgba(30,58,138,0.93) 0%, rgba(29,78,216,0.86) 100%),
+        url('ABGD_Nov3.jpg') center center / cover no-repeat;
+    }
+
+    /* Subtle lift on hover for cards */
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.10);
+    }
+
+    /* Fade-in scroll animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger siblings */
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+    .fade-in:nth-child(4) { transition-delay: 0.3s; }
+    .fade-in:nth-child(5) { transition-delay: 0.4s; }
+    .fade-in:nth-child(6) { transition-delay: 0.5s; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900 bg-white antialiased">
+
+<!-- ============================================================
+     TOP BAR — social links, phone, address
+     ============================================================ -->
+<div class="bg-brand-dark text-white text-xs py-2 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-0">
+
+    <!-- Left: location + hours -->
+    <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+      <span class="flex items-center gap-1.5">
+        <i class="fas fa-map-marker-alt text-brand-mid"></i>
+        Greater Kansas City, MO &amp; KS
+      </span>
+      <span class="hidden sm:flex items-center gap-1.5">
+        <i class="fas fa-clock text-brand-mid"></i>
+        Mon–Sun 8AM–5PM &bull; Emergency After Hours
+      </span>
+    </div>
+
+    <!-- Right: phone + social icons -->
+    <div class="flex items-center gap-4">
+      <a href="tel:8162899600" class="font-semibold hover:text-blue-200 transition-colors flex items-center gap-1.5">
+        <i class="fas fa-phone"></i> 816.289.9600
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Google"   class="hover:text-blue-300 transition-colors"><i class="fab fa-google"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition-colors"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     NAVIGATION — sticky, logo + links + mobile hamburger
+     ============================================================ -->
+<nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-2.5 no-underline">
+      <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none select-none">N</div>
+      <div>
+        <div class="font-black text-brand-dark text-base sm:text-lg leading-tight">Nate's Door Service</div>
+        <div class="text-xs text-gray-400 leading-tight hidden sm:block">Excellence in Every Installation</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="hidden lg:flex items-center gap-6">
+      <a href="#services"     class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Services</a>
+      <a href="#about"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About</a>
+      <a href="#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
+      <a href="#service-area" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Area</a>
+      <a href="#contact"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
+      <a href="tel:8162899600"
+         class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
+        <i class="fas fa-phone text-xs"></i> Call Now
+      </a>
+    </div>
+
+    <!-- Mobile hamburger button -->
+    <button id="hamburger" class="lg:hidden text-gray-600 hover:text-brand focus:outline-none p-1" aria-label="Toggle menu" aria-expanded="false">
+      <i id="hamburger-icon" class="fas fa-bars text-2xl"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+    <nav class="flex flex-col gap-1">
+      <a href="#services"     onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Services</a>
+      <a href="#about"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Us</a>
+      <a href="#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
+      <a href="#service-area" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Area</a>
+      <a href="#contact"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
+      <a href="tel:8162899600"
+         class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
+        <i class="fas fa-phone"></i> 816.289.9600
+      </a>
+    </nav>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO — headline + trust badges + CTA + contact form card
+     ============================================================ -->
+<section id="hero" class="hero-bg text-white py-16 md:py-24 lg:py-32">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+      <!-- Left: Copy -->
+      <div class="fade-in">
+        <!-- Trust pill -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6 text-sm font-medium">
+          <i class="fas fa-shield-alt text-yellow-400"></i>
+          Trusted by Kansas City Since 2010
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-black leading-tight mb-5">
+          Kansas City's <span class="text-blue-300">Trusted</span><br class="hidden sm:block" /> Garage Door Experts
+        </h1>
+
+        <p class="text-blue-100 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          Residential &amp; commercial installation, repair, and spring replacement — done fast, done right.
+          15+ years of experience. Emergency service available 24/7.
+        </p>
+
+        <!-- Trust badges row -->
+        <div class="flex flex-wrap gap-5 mb-9 text-sm">
+          <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400"></i> 5-Star Rated</span>
+          <span class="flex items-center gap-1.5"><i class="fas fa-bolt text-blue-300"></i> Same-Day Service</span>
+          <span class="flex items-center gap-1.5"><i class="fas fa-tools text-blue-300"></i> Licensed &amp; Insured</span>
+          <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-blue-300"></i> KC Metro Coverage</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:8162899600"
+             class="bg-white text-brand-dark hover:bg-blue-50 px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-0.5">
+            <i class="fas fa-phone animate-pulse"></i>
+            816.289.9600
+          </a>
+          <a href="#contact"
+             class="border-2 border-white/70 text-white hover:bg-white/10 px-7 py-4 rounded-full font-semibold text-base flex items-center justify-center gap-2 transition-all">
+            Get a Free Quote <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Contact form card -->
+      <div class="fade-in">
+        <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-gray-900">
+          <h2 class="text-xl font-black text-gray-900 mb-0.5">Get a Free Quote</h2>
+          <p class="text-gray-500 text-sm mb-5">We respond within 1 hour during business hours.</p>
+
+          <form id="hero-form" novalidate class="space-y-3.5">
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1">Name *</label>
+                <input type="text" name="name" required placeholder="Your name"
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1">Phone *</label>
+                <input type="tel" name="phone" required placeholder="(816) 000-0000"
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Email</label>
+              <input type="email" name="email" placeholder="your@email.com"
+                class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1">Message *</label>
+              <textarea name="message" required rows="3" placeholder="Describe your garage door issue or project..."
+                class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-brand hover:bg-brand-dark text-white py-3 rounded-xl font-semibold text-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p id="hero-form-status" class="text-center text-xs hidden mt-1"></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section id="services" class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="text-center mb-12 fade-in">
+      <span class="text-brand font-semibold text-xs uppercase tracking-widest">What We Do</span>
+      <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-3">Expert Garage Door Services</h2>
+      <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+        From a snapped spring to a full commercial install — we handle every job with precision, speed, and a satisfaction guarantee.
+      </p>
+    </div>
+
+    <!-- Service cards grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Residential -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-home text-brand text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg mb-2">Residential</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-3">Complete installation &amp; repair for homes across the KC metro.</p>
+        <ul class="space-y-1.5 text-xs text-gray-500">
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> New door installation</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Opener install &amp; repair</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Panel replacement</li>
+        </ul>
+      </div>
+
+      <!-- Commercial -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-building text-brand text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg mb-2">Commercial</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-3">Heavy-duty doors &amp; openers for warehouses, shops, and businesses.</p>
+        <ul class="space-y-1.5 text-xs text-gray-500">
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Commercial door install</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> High-cycle openers</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Scheduled maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Spring Replacement -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-cog text-brand text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg mb-2">Spring Replacement</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-3">The most common failure — fixed fast and safely. Same-day service available.</p>
+        <ul class="space-y-1.5 text-xs text-gray-500">
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Torsion &amp; extension springs</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Safety cables</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Same-day availability</li>
+        </ul>
+      </div>
+
+      <!-- Troubleshooting -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
+          <i class="fas fa-search-plus text-brand text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 text-lg mb-2">Troubleshooting</h3>
+        <p class="text-gray-500 text-sm leading-relaxed mb-3">Not sure what's wrong? We diagnose and fix any garage door issue fast.</p>
+        <ul class="space-y-1.5 text-xs text-gray-500">
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Full inspection</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Track realignment</li>
+          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Sensor &amp; remote repair</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Service photo strip -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 fade-in">
+      <img src="ABGD_Nov3.jpg"                         alt="Technician installing a garage door panel"   class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
+      <img src="download.jpeg"                          alt="Garage door opener installation"             class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
+      <img src="images.jpeg"                            alt="Garage door repair service"                  class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
+      <img src="how-to-tighten-garage-door-springs-2.jpg" alt="Garage door spring replacement"           class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT US
+     ============================================================ -->
+<section id="about" class="py-16 md:py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Photo -->
+      <div class="fade-in relative">
+        <!-- Decorative background offset block -->
+        <div class="absolute -top-5 -left-5 w-full h-full bg-brand-light rounded-3xl -z-0"></div>
+        <img
+          src="IMG_3285.png"
+          alt="Nate White, Owner of Nate's Door Service"
+          class="relative z-10 rounded-3xl shadow-2xl w-full object-cover max-h-[500px]"
+          loading="lazy"
+        />
+        <!-- Years badge -->
+        <div class="absolute z-20 bottom-6 right-4 bg-brand text-white rounded-2xl px-5 py-3 text-center shadow-xl">
+          <div class="text-3xl font-black leading-none">15+</div>
+          <div class="text-xs font-semibold mt-0.5 opacity-90">Years Experience</div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="fade-in">
+        <span class="text-brand font-semibold text-xs uppercase tracking-widest">About Us</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-5">Meet Nate White</h2>
+
+        <p class="text-gray-600 leading-relaxed mb-4">
+          With over <strong class="text-gray-900">15 years of hands-on experience</strong>, Nate White built his business on one
+          simple idea: treat every customer's home like your own. What started as a one-man operation has grown into
+          Kansas City's most trusted garage door service — and Nate still shows up on every job himself.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-7">
+          Whether it's a broken spring at 6AM or a full commercial installation, Nate brings the same dedication to every project.
+          No shortcuts. No upselling. Just honest work at a fair price.
+        </p>
+
+        <!-- Stats row -->
+        <div class="grid grid-cols-3 gap-3 mb-7">
+          <div class="text-center bg-brand-light rounded-xl py-4">
+            <div class="text-2xl font-black text-brand">500+</div>
+            <div class="text-xs text-gray-500 mt-0.5">Jobs Done</div>
+          </div>
+          <div class="text-center bg-brand-light rounded-xl py-4">
+            <div class="text-2xl font-black text-brand">5 ★</div>
+            <div class="text-xs text-gray-500 mt-0.5">Avg. Rating</div>
+          </div>
+          <div class="text-center bg-brand-light rounded-xl py-4">
+            <div class="text-2xl font-black text-brand">24/7</div>
+            <div class="text-xs text-gray-500 mt-0.5">Emergency</div>
+          </div>
+        </div>
+
+        <!-- Quick info items -->
+        <ul class="space-y-3 mb-7 text-sm text-gray-600">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-clock text-brand mt-0.5 w-4 shrink-0"></i>
+            <span><strong class="text-gray-900">Hours:</strong> Monday – Sunday, 8AM – 5PM &bull; Emergency service available after hours</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-brand mt-0.5 w-4 shrink-0"></i>
+            <span><strong class="text-gray-900">Service Area:</strong> Greater Kansas City, MO &amp; KS</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fas fa-phone text-brand mt-0.5 w-4 shrink-0"></i>
+            <a href="tel:8162899600" class="text-brand font-bold hover:text-brand-dark transition-colors">816.289.9600</a>
+          </li>
+        </ul>
+
+        <a href="tel:8162899600"
+           class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-7 py-3.5 rounded-full font-semibold transition-colors shadow-md">
+          <i class="fas fa-phone"></i> Call Nate Today
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="text-center mb-12 fade-in">
+      <span class="text-brand font-semibold text-xs uppercase tracking-widest">Happy Customers</span>
+      <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-3">What Kansas City Says</h2>
+      <div class="flex justify-center gap-1 text-yellow-400 text-xl mb-2">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <p class="text-gray-500 text-sm">Trusted by hundreds of KC families and businesses</p>
+    </div>
+
+    <!-- Testimonials grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "Called Nate when our spring snapped and he had someone out within the hour. Honest pricing, quality work. We won't use anyone else!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/download.jpeg" alt="Sarah L." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Sarah L.</div>
+            <div class="text-xs text-gray-400">Overland Park, KS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "Nate's team installed a new commercial opener for our warehouse — on time, professional, and the price was fair. Highly recommend!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/download%20(1).jpeg" alt="Marcus T." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Marcus T.</div>
+            <div class="text-xs text-gray-400">Kansas City, MO</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "My door was off-track on a Saturday night. Nate showed up personally and had it running perfectly within the hour. Amazing!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/download%20(2).jpeg" alt="Ashley B." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Ashley B.</div>
+            <div class="text-xs text-gray-400">Lee's Summit, MO</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "New door looks incredible and the install was flawless. The team cleaned up every bit of debris. So professional from start to finish!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/download%20(3).jpeg" alt="Emily K." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Emily K.</div>
+            <div class="text-xs text-gray-400">Olathe, KS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "We've used Nate's Door Service for three properties now. Every single time is a great experience — trustworthy, fair, and skilled."
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/download%20(4).jpeg" alt="Jennifer M." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Jennifer M.</div>
+            <div class="text-xs text-gray-400">Leawood, KS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
+        <div class="flex gap-0.5 text-yellow-400 mb-3">
+          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
+          "Called at 7PM with an emergency and Nate showed up personally. 15 years of experience really shows — diagnosed it instantly. True pro!"
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Reviews/images.jpeg" alt="Tyler C." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
+          <div>
+            <div class="font-semibold text-gray-900 text-sm">Tyler C.</div>
+            <div class="text-xs text-gray-400">Independence, MO</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICE AREA
+     ============================================================ -->
+<section id="service-area" class="py-16 md:py-24 bg-brand-dark text-white">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="text-center mb-12 fade-in">
+      <span class="text-blue-300 font-semibold text-xs uppercase tracking-widest">Coverage</span>
+      <h2 class="text-3xl md:text-4xl font-black mt-2 mb-3">Proudly Serving Greater Kansas City</h2>
+      <p class="text-blue-200 text-sm max-w-xl mx-auto">
+        We cover both sides of the state line. If you're in the KC metro area, we've got you covered.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- OpenStreetMap embed -->
+      <div class="fade-in rounded-2xl overflow-hidden shadow-2xl h-72 md:h-96 border-2 border-white/10">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-94.95%2C38.78%2C-94.15%2C39.25&layer=mapnik&marker=39.0997%2C-94.5786"
+          width="100%"
+          height="100%"
+          loading="lazy"
+          title="Nate's Door Service — Greater Kansas City service area map"
+          style="border:0;">
+        </iframe>
+      </div>
+
+      <!-- City list -->
+      <div class="fade-in">
+        <div class="grid grid-cols-2 gap-x-8 gap-y-2">
+
+          <!-- Missouri column -->
+          <div>
+            <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
+              <i class="fas fa-map-marker-alt"></i> Missouri
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Kansas City, MO</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Independence</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Lee's Summit</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Blue Springs</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Liberty</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Gladstone</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Raytown</li>
+            </ul>
+          </div>
+
+          <!-- Kansas column -->
+          <div>
+            <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
+              <i class="fas fa-map-marker-alt"></i> Kansas
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Overland Park</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Olathe</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Leawood</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Lenexa</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Shawnee</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Prairie Village</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Gardner</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- "Not listed?" callout -->
+        <div class="mt-7 bg-white/10 border border-white/20 rounded-xl p-4 flex items-start gap-3">
+          <i class="fas fa-info-circle text-yellow-400 text-lg mt-0.5 shrink-0"></i>
+          <div>
+            <p class="font-semibold text-sm">Don't see your city?</p>
+            <p class="text-blue-200 text-xs mt-1 leading-relaxed">
+              Give us a call — we may still cover your area. Emergency service is available throughout the greater KC metro, 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section id="contact" class="py-16 md:py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Section header -->
+    <div class="text-center mb-12 fade-in">
+      <span class="text-brand font-semibold text-xs uppercase tracking-widest">Get In Touch</span>
+      <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 mb-3">Ready to Get Started?</h2>
+      <p class="text-gray-500 text-sm max-w-xl mx-auto">
+        Fill out the form below or give us a call. We typically respond within 1 hour during business hours.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10">
+
+      <!-- Contact info -->
+      <div class="lg:col-span-2 fade-in space-y-6">
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-phone text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Call Us</p>
+            <a href="tel:8162899600" class="text-brand hover:text-brand-dark font-bold text-xl block leading-tight">816.289.9600</a>
+            <p class="text-gray-400 text-xs mt-0.5">Emergency line available 24/7</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-envelope text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Email Us</p>
+            <a href="mailto:contact@natesdoorservice.com" class="text-brand hover:text-brand-dark text-sm transition-colors">
+              contact@natesdoorservice.com
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-clock text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Business Hours</p>
+            <p class="text-gray-600 text-sm">Monday – Sunday: 8AM – 5PM</p>
+            <p class="text-brand text-sm font-semibold mt-0.5">Emergency service available after hours</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-map-marker-alt text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Service Area</p>
+            <p class="text-gray-600 text-sm">Greater Kansas City, MO &amp; KS</p>
+          </div>
+        </div>
+
+        <!-- Social icons -->
+        <div class="flex gap-3 pt-1">
+          <a href="#" aria-label="Facebook"  class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-facebook-f text-sm"></i></a>
+          <a href="#" aria-label="Google"    class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-google text-sm"></i></a>
+          <a href="#" aria-label="Instagram" class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-instagram text-sm"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Contact form -->
+      <div class="lg:col-span-3 fade-in">
+        <form id="contact-form" novalidate class="bg-gray-50 rounded-2xl p-6 md:p-8 space-y-4 shadow-sm border border-gray-100">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Full Name *</label>
+              <input type="text" name="name" required placeholder="Your name"
+                class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1.5">Phone Number *</label>
+              <input type="tel" name="phone" required placeholder="(816) 000-0000"
+                class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Email Address *</label>
+            <input type="email" name="email" required placeholder="your@email.com"
+              class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1.5">Message *</label>
+            <textarea name="message" required rows="4" placeholder="Describe your garage door issue or project..."
+              class="w-full border border-gray-200 bg-white rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-brand hover:bg-brand-dark text-white py-3.5 rounded-xl font-semibold text-base transition-colors flex items-center justify-center gap-2 shadow-sm">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p id="contact-form-status" class="text-center text-sm hidden"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-gray-900 text-white pt-12 pb-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+
+      <!-- Brand blurb -->
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none">N</div>
+          <div>
+            <div class="font-black text-lg leading-tight">Nate's Door Service</div>
+            <div class="text-xs text-gray-400">Excellence in Every Installation</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Kansas City's trusted garage door experts since 2010. Serving the entire KC metro with pride, integrity, and craftsmanship.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" aria-label="Facebook"  class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Google"    class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-google"></i></a>
+          <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="#services"     class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="#about"        class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition-colors">Reviews</a></li>
+          <li><a href="#service-area" class="hover:text-white transition-colors">Service Area</a></li>
+          <li><a href="#contact"      class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-phone text-brand-mid w-4"></i>
+            <a href="tel:8162899600" class="hover:text-white transition-colors">816.289.9600</a>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-envelope text-brand-mid w-4"></i>
+            <a href="mailto:contact@natesdoorservice.com" class="hover:text-white transition-colors">contact@natesdoorservice.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-map-marker-alt text-brand-mid w-4 mt-0.5"></i>
+            <span>Greater Kansas City, MO &amp; KS</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-clock text-brand-mid w-4 mt-0.5"></i>
+            <span>Mon–Sun 8AM–5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+      &copy; 2025 Nate's Door Service. All rights reserved. &bull; Greater Kansas City, MO &amp; KS
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     STICKY BOTTOM BAR — always-visible phone CTA
+     ============================================================ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-brand shadow-[0_-4px_20px_rgba(0,0,0,0.2)]">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2 min-w-0">
+      <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+        <i class="fas fa-phone-alt text-white text-sm"></i>
+      </div>
+      <p class="text-white text-sm font-medium truncate">Call to get a <span class="font-bold">free quote</span> today!</p>
+    </div>
+    <a href="tel:8162899600"
+       class="bg-white text-brand hover:bg-blue-50 px-5 py-2 rounded-full font-bold text-sm whitespace-nowrap transition-colors flex items-center gap-2 shadow-md shrink-0">
+      <i class="fas fa-phone text-xs"></i> 816.289.9600
+    </a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SCRIPTS — mobile menu, form handling, scroll animations
+     ============================================================ -->
+<script>
+  /* ---- Mobile Menu ---- */
+  const hamburger    = document.getElementById('hamburger');
+  const mobileMenu   = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburgerIcon.className = 'fas fa-bars text-2xl';
+  }
+
+  // Close on outside tap
+  document.addEventListener('click', e => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+
+  /* ---- Contact Form Handler ---- */
+  function wireForm(formId, statusId) {
+    const form   = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const data = Object.fromEntries(new FormData(form));
+      const btn  = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          status.className = 'text-center text-xs text-green-600 font-semibold';
+          status.textContent = '✓ Message sent! We\'ll be in touch within 1 hour.';
+          form.reset();
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        status.className = 'text-center text-xs text-red-600';
+        status.textContent = 'Something went wrong. Please call us directly at 816.289.9600.';
+      } finally {
+        status.classList.remove('hidden');
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }
+    });
+  }
+
+  wireForm('hero-form',    'hero-form-status');
+  wireForm('contact-form', 'contact-form-status');
+
+
+  /* ---- Scroll Fade-in Animations ---- */
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
