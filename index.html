@@ -72,6 +72,50 @@
     .fade-in:nth-child(4) { transition-delay: 0.3s; }
     .fade-in:nth-child(5) { transition-delay: 0.4s; }
     .fade-in:nth-child(6) { transition-delay: 0.5s; }
+
+    @keyframes ring {
+      0%   { transform: rotate(0deg); }
+      5%   { transform: rotate(5deg); }
+      10%  { transform: rotate(-5deg); }
+      15%  { transform: rotate(4deg); }
+      20%  { transform: rotate(-4deg); }
+      25%  { transform: rotate(3deg); }
+      30%  { transform: rotate(-2deg); }
+      35%  { transform: rotate(1deg); }
+      40%  { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .animate-ring {
+      display: inline-block;
+      animation: ring 2.5s ease-in-out infinite;
+      transform-origin: top center;
+    }
+
+    @keyframes star-pop {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(1.45); }
+      65%  { transform: scale(0.92); }
+      80%  { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .star-pop {
+      display: inline-block;
+      animation: star-pop 0.55s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+    }
+    @keyframes border-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+        border-color: rgba(255,255,255,0.7);
+      }
+      50% {
+        box-shadow: 0 0 5px 3px rgba(255,255,255,0.15), 0 0 13px 5px rgba(147,197,253,0.09);
+        border-color: rgba(255,255,255,0.80);
+      }
+    }
+    .btn-border-glow {
+      animation: border-glow 4s ease-in-out infinite;
+    }
+
   </style>
 </head>
 
@@ -87,7 +131,7 @@
     <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
       <span class="flex items-center gap-1.5">
         <i class="fas fa-map-marker-alt text-brand-mid"></i>
-        Greater Kansas City, MO &amp; KS
+        Greater Kansas City Area – Missouri &amp; Kansas
       </span>
       <span class="hidden sm:flex items-center gap-1.5">
         <i class="fas fa-clock text-brand-mid"></i>
@@ -97,12 +141,12 @@
 
     <!-- Right: phone + social icons -->
     <div class="flex items-center gap-4">
-      <a href="tel:8162899600" class="font-semibold hover:text-blue-200 transition-colors flex items-center gap-1.5">
-        <i class="fas fa-phone"></i> 816.289.9600
+        <a href="tel:8162899600" class="font-semibold hover:text-blue-200 transition-colors flex items-center gap-1.5">
+        <i class="fas fa-phone animate-ring"></i> 816.289.9600
       </a>
       <div class="flex items-center gap-3">
-        <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition-colors"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Google"   class="hover:text-blue-300 transition-colors"><i class="fab fa-google"></i></a>
+        <a href="#" aria-label="Facebook"  class="hover:text-blue-300 transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Google"    class="hover:text-blue-300 transition-colors"><i class="fab fa-google"></i></a>
         <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition-colors"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
@@ -135,7 +179,7 @@
       <a href="#contact"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
       <a href="tel:8162899600"
          class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
-        <i class="fas fa-phone text-xs"></i> Call Now
+        <i class="fas fa-phone animate-ring text-xs"></i> Call Now
       </a>
     </div>
 
@@ -156,7 +200,7 @@
       <a href="#contact"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
       <a href="tel:8162899600"
          class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
-        <i class="fas fa-phone"></i> 816.289.9600
+        <i class="fas fa-phone animate-ring"></i> 816.289.9600
       </a>
     </nav>
   </div>
@@ -192,18 +236,18 @@
           <span class="flex items-center gap-1.5"><i class="fas fa-star text-yellow-400"></i> 5-Star Rated</span>
           <span class="flex items-center gap-1.5"><i class="fas fa-bolt text-blue-300"></i> Same-Day Service</span>
           <span class="flex items-center gap-1.5"><i class="fas fa-tools text-blue-300"></i> Licensed &amp; Insured</span>
-          <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-blue-300"></i> KC Metro Coverage</span>
+          <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-blue-300"></i> Greater Kansas City Area – Missouri & Kansas</span>
         </div>
 
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-3">
           <a href="tel:8162899600"
              class="bg-white text-brand-dark hover:bg-blue-50 px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-0.5">
-            <i class="fas fa-phone animate-pulse"></i>
+            <i class="fas fa-phone animate-ring"></i>
             816.289.9600
           </a>
           <a href="#contact"
-             class="border-2 border-white/70 text-white hover:bg-white/10 px-7 py-4 rounded-full font-semibold text-base flex items-center justify-center gap-2 transition-all">
+             class="btn-border-glow border-2 border-white/70 text-white hover:bg-white/10 px-7 py-4 rounded-full font-semibold text-base flex items-center justify-center gap-2 transition-all">
             Get a Free Quote <i class="fas fa-arrow-right text-sm"></i>
           </a>
         </div>
@@ -301,7 +345,9 @@
       <!-- Spring Replacement -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
         <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-cog text-brand text-2xl"></i>
+          <svg class="text-brand" style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 3 C18 3 18 7 6 7 C18 7 18 11 6 11 C18 11 18 15 6 15 C18 15 18 19 6 19 C18 19 18 22 12 22"/>
+          </svg>
         </div>
         <h3 class="font-bold text-gray-900 text-lg mb-2">Spring Replacement</h3>
         <p class="text-gray-500 text-sm leading-relaxed mb-3">The most common failure — fixed fast and safely. Same-day service available.</p>
@@ -315,7 +361,7 @@
       <!-- Troubleshooting -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
         <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-search-plus text-brand text-2xl"></i>
+          <i class="fas fa-question text-brand text-2xl"></i>
         </div>
         <h3 class="font-bold text-gray-900 text-lg mb-2">Troubleshooting</h3>
         <p class="text-gray-500 text-sm leading-relaxed mb-3">Not sure what's wrong? We diagnose and fix any garage door issue fast.</p>
@@ -382,15 +428,15 @@
         <!-- Stats row -->
         <div class="grid grid-cols-3 gap-3 mb-7">
           <div class="text-center bg-brand-light rounded-xl py-4">
-            <div class="text-2xl font-black text-brand">500+</div>
+            <div id="jobs-count" class="text-2xl font-black text-brand">0</div>
             <div class="text-xs text-gray-500 mt-0.5">Jobs Done</div>
           </div>
           <div class="text-center bg-brand-light rounded-xl py-4">
-            <div class="text-2xl font-black text-brand">5 ★</div>
+            <div id="star-rating" class="text-2xl font-black text-brand">5 ★</div>
             <div class="text-xs text-gray-500 mt-0.5">Avg. Rating</div>
           </div>
           <div class="text-center bg-brand-light rounded-xl py-4">
-            <div class="text-2xl font-black text-brand">24/7</div>
+            <div id="emergency-count" class="text-2xl font-black text-brand">24/7</div>
             <div class="text-xs text-gray-500 mt-0.5">Emergency</div>
           </div>
         </div>
@@ -403,17 +449,17 @@
           </li>
           <li class="flex items-start gap-3">
             <i class="fas fa-map-marker-alt text-brand mt-0.5 w-4 shrink-0"></i>
-            <span><strong class="text-gray-900">Service Area:</strong> Greater Kansas City, MO &amp; KS</span>
+            <span><strong class="text-gray-900">Service Area:</strong> Greater Kansas City Area – Missouri &amp; Kansas</span>
           </li>
           <li class="flex items-start gap-3">
-            <i class="fas fa-phone text-brand mt-0.5 w-4 shrink-0"></i>
+            <i class="fas fa-phone animate-ring text-brand mt-0.5 w-4 shrink-0"></i>
             <a href="tel:8162899600" class="text-brand font-bold hover:text-brand-dark transition-colors">816.289.9600</a>
           </li>
         </ul>
 
         <a href="tel:8162899600"
            class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white px-7 py-3.5 rounded-full font-semibold transition-colors shadow-md">
-          <i class="fas fa-phone"></i> Call Nate Today
+          <i class="fas fa-phone animate-ring"></i> Call Nate Today
         </a>
       </div>
 
@@ -573,38 +619,80 @@
 
       <!-- City list -->
       <div class="fade-in">
-        <div class="grid grid-cols-2 gap-x-8 gap-y-2">
+        <div class="space-y-5">
 
-          <!-- Missouri column -->
+          <!-- Missouri pills -->
           <div>
             <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
               <i class="fas fa-map-marker-alt"></i> Missouri
             </h3>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Kansas City, MO</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Independence</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Lee's Summit</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Blue Springs</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Liberty</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Gladstone</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Raytown</li>
-            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Kansas City, MO</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Independence</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lee's Summit</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Blue Springs</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Liberty</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Gladstone</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Raytown</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">North Kansas City</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Belton</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Raymore</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Grandview</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Grain Valley</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Kearney</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Platte City</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Smithville</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Excelsior Springs</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Harrisonville</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Pleasant Hill</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Odessa</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Oak Grove</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Buckner</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Peculiar</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Drexel</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Garden City</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lone Jack</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lawson</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Richmond</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Warrensburg</span>
+            </div>
           </div>
 
-          <!-- Kansas column -->
+          <!-- Kansas pills -->
           <div>
             <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
               <i class="fas fa-map-marker-alt"></i> Kansas
             </h3>
-            <ul class="space-y-2 text-sm">
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Overland Park</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Olathe</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Leawood</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Lenexa</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Shawnee</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Prairie Village</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-400 text-xs"></i> Gardner</li>
-            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Overland Park</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Olathe</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Leawood</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lenexa</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Shawnee</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Prairie Village</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Gardner</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Mission</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Merriam</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Roeland Park</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Stilwell</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Spring Hill</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">De Soto</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Leavenworth</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Basehor</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Tonganoxie</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Bonner Springs</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Paola</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Louisburg</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lansing</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Eudora</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lawrence</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Edgerton</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Osawatomie</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Baldwin City</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Atchison</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Ottawa</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Wellsville</span>
+            </div>
           </div>
 
         </div>
@@ -648,7 +736,7 @@
 
         <div class="flex items-start gap-4">
           <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
-            <i class="fas fa-phone text-brand"></i>
+            <i class="fas fa-phone animate-ring text-brand"></i>
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Call Us</p>
@@ -686,7 +774,7 @@
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Service Area</p>
-            <p class="text-gray-600 text-sm">Greater Kansas City, MO &amp; KS</p>
+            <p class="text-gray-600 text-sm">Greater Kansas City Area – Missouri &amp; Kansas</p>
           </div>
         </div>
 
@@ -780,7 +868,7 @@
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
         <ul class="space-y-2.5 text-sm text-gray-400">
           <li class="flex items-center gap-2.5">
-            <i class="fas fa-phone text-brand-mid w-4"></i>
+            <i class="fas fa-phone animate-ring text-brand-mid w-4"></i>
             <a href="tel:8162899600" class="hover:text-white transition-colors">816.289.9600</a>
           </li>
           <li class="flex items-center gap-2.5">
@@ -789,7 +877,7 @@
           </li>
           <li class="flex items-start gap-2.5">
             <i class="fas fa-map-marker-alt text-brand-mid w-4 mt-0.5"></i>
-            <span>Greater Kansas City, MO &amp; KS</span>
+            <span>Greater Kansas City Area – Missouri &amp; Kansas</span>
           </li>
           <li class="flex items-start gap-2.5">
             <i class="fas fa-clock text-brand-mid w-4 mt-0.5"></i>
@@ -801,7 +889,7 @@
     </div>
 
     <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
-      &copy; 2025 Nate's Door Service. All rights reserved. &bull; Greater Kansas City, MO &amp; KS
+      &copy; 2025 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area – Missouri &amp; Kansas
     </div>
   </div>
 </footer>
@@ -814,13 +902,13 @@
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
     <div class="flex items-center gap-2 min-w-0">
       <div class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-        <i class="fas fa-phone-alt text-white text-sm"></i>
+        <i class="fas fa-phone-alt animate-ring text-white text-sm"></i>
       </div>
       <p class="text-white text-sm font-medium truncate">Call to get a <span class="font-bold">free quote</span> today!</p>
     </div>
     <a href="tel:8162899600"
        class="bg-white text-brand hover:bg-blue-50 px-5 py-2 rounded-full font-bold text-sm whitespace-nowrap transition-colors flex items-center gap-2 shadow-md shrink-0">
-      <i class="fas fa-phone text-xs"></i> 816.289.9600
+      <i class="fas fa-phone animate-ring text-xs"></i> 816.289.9600
     </a>
   </div>
 </div>
@@ -907,6 +995,33 @@
   );
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  /* ---- Jobs Count-Up Animation ---- */
+  const jobsEl = document.getElementById('jobs-count');
+  const countObserver = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting) return;
+    countObserver.disconnect();
+    const target = 10000;
+    const duration = 1800;
+    const step = 16;
+    const increment = target / (duration / step);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + increment, target);
+      jobsEl.textContent = current >= target
+        ? '10,000+'
+        : Math.floor(current).toLocaleString();
+      if (current >= target) {
+        clearInterval(timer);
+        const starEl = document.getElementById('star-rating');
+        starEl.classList.add('star-pop');
+        starEl.addEventListener('animationend', () => {
+          document.getElementById('emergency-count').classList.add('star-pop');
+        }, { once: true });
+      }
+    }, step);
+  }, { threshold: 0.5 });
+  countObserver.observe(jobsEl);
 </script>
 
 </body>
