@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "*.{jpg,jpeg,png}", "use": "@vercel/static" },
+    { "src": "Reviews/**", "use": "@vercel/static" },
+    { "src": "server.js", "use": "@vercel/node" }
+  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/server.js" }
