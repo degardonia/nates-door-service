@@ -42,8 +42,8 @@
     /* Hero: dark blue gradient layered over the action photo */
     .hero-bg {
       background:
-        linear-gradient(135deg, rgba(30,58,138,0.93) 0%, rgba(29,78,216,0.86) 100%),
-        url('ABGD_Nov3.jpg') center center / cover no-repeat;
+        linear-gradient(135deg, rgba(30,58,138,0.72) 0%, rgba(29,78,216,0.65) 100%),
+        url('photos/Hero.webp') center center / cover no-repeat;
     }
 
     /* Subtle lift on hover for cards */
@@ -173,6 +173,7 @@
     <!-- Desktop nav links -->
     <div class="hidden lg:flex items-center gap-6">
       <a href="#services"     class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Services</a>
+      <a href="#gallery"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Gallery</a>
       <a href="#about"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About</a>
       <a href="#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
       <a href="#service-area" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Area</a>
@@ -194,6 +195,7 @@
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
     <nav class="flex flex-col gap-1">
       <a href="#services"     onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Services</a>
+      <a href="#gallery"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Gallery</a>
       <a href="#about"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Us</a>
       <a href="#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
       <a href="#service-area" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Area</a>
@@ -210,7 +212,7 @@
 <!-- ============================================================
      HERO — headline + trust badges + CTA + contact form card
      ============================================================ -->
-<section id="hero" class="hero-bg text-white py-16 md:py-24 lg:py-32">
+<section id="hero" class="hero-bg text-white py-10 md:py-14 lg:py-16">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
@@ -227,8 +229,7 @@
         </h1>
 
         <p class="text-blue-100 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
-          Residential &amp; commercial installation, repair, and spring replacement — done fast, done right.
-          15+ years of experience. Emergency service available 24/7.
+          Residential &amp; Commercial Garage Door, Opener, Spring Installation &amp; Repair — Done Fast. Done Right. 15+ Years of Experience. 24/7 Emergency Service Available.
         </p>
 
         <!-- Trust badges row -->
@@ -257,7 +258,7 @@
       <div class="fade-in">
         <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8 text-gray-900">
           <h2 class="text-xl font-black text-gray-900 mb-0.5">Get a Free Quote</h2>
-          <p class="text-gray-500 text-sm mb-5">We respond within 1 hour during business hours.</p>
+          <p class="text-gray-500 text-sm mb-5"><i class="fas fa-bolt text-brand mr-1.5"></i>We respond within 1 hour during business hours.</p>
 
           <form id="hero-form" novalidate class="space-y-3.5">
             <div class="grid grid-cols-2 gap-3">
@@ -299,7 +300,7 @@
 <!-- ============================================================
      SERVICES
      ============================================================ -->
-<section id="services" class="py-16 md:py-24 bg-gray-50">
+<section id="services" class="py-10 md:py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
 
     <!-- Section header -->
@@ -312,74 +313,150 @@
     </div>
 
     <!-- Service cards grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
       <!-- Residential -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-home text-brand text-2xl"></i>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-14 h-14 shrink-0 bg-brand-light rounded-2xl flex items-center justify-center">
+            <i class="fas fa-home text-brand text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-0">Residential</h3>
         </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Residential</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-3">Complete installation &amp; repair for homes across the KC metro.</p>
-        <ul class="space-y-1.5 text-xs text-gray-500">
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> New door installation</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Opener install &amp; repair</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Panel replacement</li>
-        </ul>
+        <div class="mx-1 border-t border-gray-200 my-4" aria-hidden="true"></div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4 min-h-[4.5em]">We provide reliable residential garage door installation and repair across the Kansas City metro. From new doors and opener upgrades to spring repairs and maintenance, our technicians deliver fast, professional service.</p>
+        <div class="bg-gray-50 rounded-xl p-3 -mx-1">
+          <ul class="space-y-1.5 text-xs text-gray-500">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> New garage door installation</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Garage door repair &amp; adjustments</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Opener installation &amp; replacement</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Opener troubleshooting &amp; repair</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Spring repair &amp; spring replacement</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Cable and roller replacement</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Panel repair &amp; panel replacement</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Remote and keypad programming</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Safety sensor alignment &amp; repair</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Preventative maintenance &amp; tune-ups</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Commercial -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-building text-brand text-2xl"></i>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-14 h-14 shrink-0 bg-brand-light rounded-2xl flex items-center justify-center">
+            <i class="fas fa-building text-brand text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-0">Commercial</h3>
         </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Commercial</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-3">Heavy-duty doors &amp; openers for warehouses, shops, and businesses.</p>
-        <ul class="space-y-1.5 text-xs text-gray-500">
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Commercial door install</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> High-cycle openers</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Scheduled maintenance</li>
-        </ul>
-      </div>
-
-      <!-- Spring Replacement -->
-      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <svg class="text-brand" style="width:1.5rem;height:1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-            <path d="M6 3 C18 3 18 7 6 7 C18 7 18 11 6 11 C18 11 18 15 6 15 C18 15 18 19 6 19 C18 19 18 22 12 22"/>
-          </svg>
+        <div class="mx-1 border-t border-gray-200 my-4" aria-hidden="true"></div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4 min-h-[4.5em]">We install and service durable commercial doors and openers for daily business use. Dependable installations, repairs, and maintenance to minimize downtime for warehouses and industrial facilities.</p>
+        <div class="bg-gray-50 rounded-xl p-3 -mx-1">
+          <ul class="space-y-1.5 text-xs text-gray-500">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Commercial door installation</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Heavy-duty sectional &amp; rolling doors</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> High-cycle commercial opener systems</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Spring replacement &amp; tension adjustments</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Track repair and realignment</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Preventative maintenance programs</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Safety inspections &amp; performance checks</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Loading dock door service</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Emergency commercial repairs</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Scheduled service agreements</li>
+          </ul>
         </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Spring Replacement</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-3">The most common failure — fixed fast and safely. Same-day service available.</p>
-        <ul class="space-y-1.5 text-xs text-gray-500">
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Torsion &amp; extension springs</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Safety cables</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Same-day availability</li>
-        </ul>
       </div>
 
       <!-- Troubleshooting -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-4">
-          <i class="fas fa-question text-brand text-2xl"></i>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-14 h-14 shrink-0 bg-brand-light rounded-2xl flex items-center justify-center">
+            <i class="fas fa-wrench text-brand text-2xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 text-lg mb-0">Troubleshooting</h3>
         </div>
-        <h3 class="font-bold text-gray-900 text-lg mb-2">Troubleshooting</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-3">Not sure what's wrong? We diagnose and fix any garage door issue fast.</p>
-        <ul class="space-y-1.5 text-xs text-gray-500">
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Full inspection</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Track realignment</li>
-          <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs"></i> Sensor &amp; remote repair</li>
-        </ul>
+        <div class="mx-1 border-t border-gray-200 my-4" aria-hidden="true"></div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4 min-h-[4.5em]">We quickly diagnose garage door problems and provide clear, effective solutions. From faulty openers to noisy or stuck doors, we identify issues fast and restore safe, reliable operation.</p>
+        <div class="bg-gray-50 rounded-xl p-3 -mx-1">
+          <ul class="space-y-1.5 text-xs text-gray-500">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Full garage door system inspection</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Door not opening or closing diagnosis</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Noisy or vibrating door repair</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Opener motor troubleshooting</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Sensor &amp; safety system testing</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Track alignment and balancing</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Spring and cable inspection</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Remote and wall control issues</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Intermittent operation diagnosis</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand text-xs shrink-0"></i> Same-day repair solutions when available</li>
+          </ul>
+        </div>
       </div>
 
     </div>
 
     <!-- Service photo strip -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 fade-in">
-      <img src="ABGD_Nov3.jpg"                         alt="Technician installing a garage door panel"   class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
-      <img src="download.jpeg"                          alt="Garage door opener installation"             class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
-      <img src="images.jpeg"                            alt="Garage door repair service"                  class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
-      <img src="how-to-tighten-garage-door-springs-2.jpg" alt="Garage door spring replacement"           class="rounded-xl h-40 w-full object-cover shadow-sm" loading="lazy" />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 fade-in">
+      <img src="photos/Residential Garage Doors copy.webp" alt="Residential garage door installation and repair" class="rounded-xl h-52 w-full object-cover shadow-sm" loading="lazy" />
+      <img src="photos/Commercial Garage Door.webp"        alt="Commercial garage door installation and service" class="rounded-xl h-52 w-full object-cover shadow-sm" loading="lazy" />
+      <img src="photos/Troubleshooting .webp"              alt="Garage door troubleshooting and repair"          class="rounded-xl h-52 w-full object-cover shadow-sm" loading="lazy" />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery" class="py-10 md:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="text-center mb-12">
+      <p class="text-xs font-semibold uppercase tracking-widest text-brand mb-2">Our Work</p>
+      <h2 class="text-3xl md:text-4xl font-black text-gray-900">See the Results</h2>
+      <p class="mt-3 text-gray-500 text-sm max-w-md mx-auto">A look at recent installations and repairs across the Kansas City metro.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="0">
+        <img src="photos/Gallery1.webp" alt="Garage door project 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="1">
+        <img src="photos/Gallery2.webp" alt="Garage door project 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="2">
+        <img src="photos/Gallery3.webp" alt="Garage door project 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="3">
+        <img src="photos/Gallery4.webp" alt="Garage door project 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="4">
+        <img src="photos/Gallery5.webp" alt="Garage door project 5" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="5">
+        <img src="photos/Gallery6.webp" alt="Garage door project 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="hidden overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="6">
+        <img src="photos/Gallery7.webp" alt="Garage door project 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="hidden overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="7">
+        <img src="photos/Gallery8.webp" alt="Garage door project 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="hidden overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="8">
+        <img src="photos/Gallery9.webp" alt="Garage door project 9" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+      <div class="hidden overflow-hidden rounded-2xl shadow-sm h-56 md:h-64 cursor-pointer gallery-item" data-index="9">
+        <img src="photos/Gallery10.jpg" alt="Garage door project 10" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button id="gallery-see-more" class="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark border border-brand/30 hover:border-brand/60 hover:bg-brand/5 transition-all px-6 py-3 rounded-full">
+        <i class="fas fa-images"></i>
+        See All 10 Projects
+        <i class="fas fa-arrow-right text-xs"></i>
+      </button>
     </div>
 
   </div>
@@ -389,7 +466,7 @@
 <!-- ============================================================
      ABOUT US
      ============================================================ -->
-<section id="about" class="py-16 md:py-24 bg-white">
+<section id="about" class="py-10 md:py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -445,7 +522,7 @@
         <ul class="space-y-3 mb-7 text-sm text-gray-600">
           <li class="flex items-start gap-3">
             <i class="fas fa-clock text-brand mt-0.5 w-4 shrink-0"></i>
-            <span><strong class="text-gray-900">Hours:</strong> Monday – Sunday, 8AM – 5PM &bull; Emergency service available after hours</span>
+            <span><strong class="text-gray-900">Hours:</strong> Mon – Sun, 8AM – 5PM &bull; Emergency service available after hours</span>
           </li>
           <li class="flex items-start gap-3">
             <i class="fas fa-map-marker-alt text-brand mt-0.5 w-4 shrink-0"></i>
@@ -471,7 +548,7 @@
 <!-- ============================================================
      TESTIMONIALS
      ============================================================ -->
-<section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+<section id="testimonials" class="py-10 md:py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
 
     <!-- Section header -->
@@ -484,103 +561,128 @@
       <p class="text-gray-500 text-sm">Trusted by hundreds of KC families and businesses</p>
     </div>
 
-    <!-- Testimonials grid -->
+    <!-- Testimonials grid
+         Row 1: [Sarah — tall featured, rows 1-2] [Marcus] [Ashley]
+         Row 2: [Sarah cont.]                     [Emily — wide, cols 2-3      ]
+         Row 3: [Jennifer — wide, cols 1-2                ] [Tyler]
+    -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+      <!-- Sarah L. — TALL FEATURED (row-span-2) -->
+      <div class="card-hover bg-brand rounded-2xl p-7 shadow-md fade-in lg:row-span-2 flex flex-col justify-between text-white">
+        <div>
+          <div class="text-white/20 text-8xl font-black leading-none -mt-3 -mb-10 select-none">&ldquo;</div>
+          <p class="text-white/90 text-base leading-relaxed italic mb-6">
+            "Called Nate when our spring snapped and he had someone out within the hour. Honest pricing, quality work, and everything was explained clearly before the repair started. The technician was professional, efficient, and made sure the door was running perfectly before leaving. We won't use anyone else!"
+          </p>
         </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "Called Nate when our spring snapped and he had someone out within the hour. Honest pricing, quality work. We won't use anyone else!"
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/download.jpeg" alt="Sarah L." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Sarah L.</div>
-            <div class="text-xs text-gray-400">Overland Park, KS</div>
+        <div>
+          <div class="flex gap-0.5 text-yellow-300 mb-3">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm shrink-0">SL</div>
+            <div>
+              <div class="font-semibold text-white text-sm">Sarah L.</div>
+              <div class="text-xs text-white/60">Overland Park, KS</div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Marcus T. — normal -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "Nate's team installed a new commercial opener for our warehouse — on time, professional, and the price was fair. Highly recommend!"
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/download%20(1).jpeg" alt="Marcus T." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Marcus T.</div>
-            <div class="text-xs text-gray-400">Kansas City, MO</div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm shrink-0">MT</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Marcus T.</div>
+              <div class="text-xs text-gray-400">Kansas City, MO</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5 text-yellow-400 shrink-0">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
           </div>
         </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic">
+          "Nate's team installed a new commercial opener for our warehouse — on time, professional, and exactly what was quoted. Clean install, no mess left behind. Worked around our hours without any disruption."
+        </p>
       </div>
 
+      <!-- Ashley B. — normal -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "My door was off-track on a Saturday night. Nate showed up personally and had it running perfectly within the hour. Amazing!"
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/download%20(2).jpeg" alt="Ashley B." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Ashley B.</div>
-            <div class="text-xs text-gray-400">Lee's Summit, MO</div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm shrink-0">AB</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Ashley B.</div>
+              <div class="text-xs text-gray-400">Lee's Summit, MO</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5 text-yellow-400 shrink-0">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
           </div>
         </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic">
+          "My door was off-track on a Saturday night. Nate showed up personally and had it running perfectly within the hour. Amazing service! Couldn't believe the response time on a weekend night — truly above and beyond."
+        </p>
       </div>
 
-      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "New door looks incredible and the install was flawless. The team cleaned up every bit of debris. So professional from start to finish!"
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/download%20(3).jpeg" alt="Emily K." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Emily K.</div>
-            <div class="text-xs text-gray-400">Olathe, KS</div>
+      <!-- Emily K. — WIDE (col-span-2) -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in lg:col-span-2">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm shrink-0">EK</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Emily K.</div>
+              <div class="text-xs text-gray-400">Olathe, KS</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5 text-yellow-400 shrink-0">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
           </div>
         </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic">
+          "Our new garage door looks incredible, the installation was flawless, and the team cleaned up every bit of debris before leaving. Extremely professional, on time, and absolutely worth every penny."
+        </p>
       </div>
 
-      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "We've used Nate's Door Service for three properties now. Every single time is a great experience — trustworthy, fair, and skilled."
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/download%20(4).jpeg" alt="Jennifer M." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Jennifer M.</div>
-            <div class="text-xs text-gray-400">Leawood, KS</div>
+      <!-- Jennifer M. — WIDE (col-span-2) -->
+      <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in lg:col-span-2">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm shrink-0">JM</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Jennifer M.</div>
+              <div class="text-xs text-gray-400">Leawood, KS</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5 text-yellow-400 shrink-0">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
           </div>
         </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic">
+          "We've used Nate's Door Service for three different properties now, and every experience has been excellent from start to finish. The team always arrives on time, communicates clearly, and makes sure the job is done right. Pricing is fair, workmanship is excellent, and the entire process feels smooth and stress-free. It's rare to find a company this dependable, professional, and easy to work with."
+        </p>
       </div>
 
+      <!-- Tyler C. — normal -->
       <div class="card-hover bg-white rounded-2xl p-6 shadow-md fade-in">
-        <div class="flex gap-0.5 text-yellow-400 mb-3">
-          <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
-        </div>
-        <p class="text-gray-700 text-sm leading-relaxed italic mb-4">
-          "Called at 7PM with an emergency and Nate showed up personally. 15 years of experience really shows — diagnosed it instantly. True pro!"
-        </p>
-        <div class="flex items-center gap-3">
-          <img src="Reviews/images.jpeg" alt="Tyler C." class="w-11 h-11 rounded-full object-cover shadow-sm" loading="lazy" />
-          <div>
-            <div class="font-semibold text-gray-900 text-sm">Tyler C.</div>
-            <div class="text-xs text-gray-400">Independence, MO</div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-brand flex items-center justify-center text-white font-bold text-sm shrink-0">TC</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-sm">Tyler C.</div>
+              <div class="text-xs text-gray-400">Independence, MO</div>
+            </div>
+          </div>
+          <div class="flex gap-0.5 text-yellow-400 shrink-0">
+            <i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i><i class="fas fa-star text-sm"></i>
           </div>
         </div>
+        <p class="text-gray-700 text-sm leading-relaxed italic">
+          "Called at 7PM with an emergency and Nate showed up personally. 15 years of experience really shows — diagnosed it instantly. True pro and outstanding service from start to finish!"
+        </p>
       </div>
 
     </div>
@@ -591,7 +693,7 @@
 <!-- ============================================================
      SERVICE AREA
      ============================================================ -->
-<section id="service-area" class="py-16 md:py-24 bg-brand-dark text-white">
+<section id="service-area" class="py-10 md:py-16 bg-brand-dark text-white">
   <div class="max-w-6xl mx-auto px-4">
 
     <!-- Section header -->
@@ -599,16 +701,45 @@
       <span class="text-blue-300 font-semibold text-xs uppercase tracking-widest">Coverage</span>
       <h2 class="text-3xl md:text-4xl font-black mt-2 mb-3">Proudly Serving Greater Kansas City</h2>
       <p class="text-blue-200 text-sm max-w-xl mx-auto">
-        We cover both sides of the state line. If you're in the KC metro area, we've got you covered.
+        We cover both sides of the state line. If you're in the Greater Kansas City Area, Missouri &amp; Kansas, we've got you covered.
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
+    <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-start">
 
-      <!-- OpenStreetMap embed -->
-      <div class="fade-in rounded-2xl overflow-hidden shadow-2xl h-72 md:h-96 border-2 border-white/10">
+      <!-- Kansas column (left) -->
+      <div class="fade-in">
+        <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
+          <i class="fas fa-map-marker-alt"></i> Kansas
+        </h3>
+        <div class="grid grid-cols-2 gap-2">
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Overland Park</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Olathe</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Leawood</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Lenexa</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Shawnee</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Prairie Village</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Gardner</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Mission</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Merriam</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Roeland Park</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Stilwell</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Spring Hill</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">De Soto</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Leavenworth</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Bonner Springs</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Lansing</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Basehor</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Tonganoxie</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Paola</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Louisburg</span>
+        </div>
+      </div>
+
+      <!-- Map (center) -->
+      <div class="fade-in rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 w-72 md:w-96 h-72 md:h-96 shrink-0">
         <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-94.95%2C38.78%2C-94.15%2C39.25&layer=mapnik&marker=39.0997%2C-94.5786"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-94.98%2C38.86%2C-94.18%2C39.34&layer=mapnik&marker=39.0997%2C-94.5786"
           width="100%"
           height="100%"
           loading="lazy"
@@ -617,107 +748,49 @@
         </iframe>
       </div>
 
-      <!-- City list -->
+      <!-- Missouri column (right) -->
       <div class="fade-in">
-        <div class="space-y-5">
-
-          <!-- Missouri pills -->
-          <div>
-            <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
-              <i class="fas fa-map-marker-alt"></i> Missouri
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Kansas City, MO</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Independence</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lee's Summit</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Blue Springs</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Liberty</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Gladstone</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Raytown</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">North Kansas City</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Belton</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Raymore</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Grandview</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Grain Valley</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Kearney</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Platte City</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Smithville</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Excelsior Springs</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Harrisonville</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Pleasant Hill</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Odessa</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Oak Grove</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Buckner</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Peculiar</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Drexel</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Garden City</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lone Jack</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lawson</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Richmond</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Warrensburg</span>
-            </div>
-          </div>
-
-          <!-- Kansas pills -->
-          <div>
-            <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
-              <i class="fas fa-map-marker-alt"></i> Kansas
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Overland Park</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Olathe</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Leawood</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lenexa</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Shawnee</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Prairie Village</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Gardner</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Mission</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Merriam</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Roeland Park</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Stilwell</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Spring Hill</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">De Soto</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Leavenworth</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Basehor</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Tonganoxie</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Bonner Springs</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Paola</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Louisburg</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lansing</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Eudora</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Lawrence</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Edgerton</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Osawatomie</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Baldwin City</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Atchison</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Ottawa</span>
-              <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs">Wellsville</span>
-            </div>
-          </div>
-
+        <h3 class="font-bold text-blue-200 text-sm mb-3 flex items-center gap-2 uppercase tracking-wide">
+          <i class="fas fa-map-marker-alt"></i> Missouri
+        </h3>
+        <div class="grid grid-cols-2 gap-2">
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Kansas City, MO</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Independence</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Lee's Summit</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Blue Springs</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Liberty</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Gladstone</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Raytown</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">North Kansas City</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Belton</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Raymore</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Grandview</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Grain Valley</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Kearney</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Platte City</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Smithville</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Harrisonville</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Pleasant Hill</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Odessa</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Oak Grove</span>
+          <span class="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-xs text-center">Excelsior Springs</span>
         </div>
+      </div>
 
-        <!-- "Not listed?" callout -->
-        <div class="mt-7 bg-white/10 border border-white/20 rounded-xl p-4 flex items-start gap-3">
-          <i class="fas fa-info-circle text-yellow-400 text-lg mt-0.5 shrink-0"></i>
-          <div>
-            <p class="font-semibold text-sm">Don't see your city?</p>
-            <p class="text-blue-200 text-xs mt-1 leading-relaxed">
-              Give us a call — we may still cover your area. Emergency service is available throughout the greater KC metro, 24/7.
-            </p>
-          </div>
-        </div>
+      <!-- "Not listed?" callout spans all 3 cols on desktop -->
+      <div class="lg:col-span-3 mt-2 bg-white/10 border border-white/20 rounded-xl p-4 flex items-center justify-center gap-3">
+        <i class="fas fa-info-circle text-yellow-400 text-lg shrink-0"></i>
+        <p class="text-sm text-center"><span class="font-semibold">Don't see your city?</span> <span class="text-blue-200">Give us a call — we may still cover your area. Service is available throughout the Greater Kansas City Area, Missouri &amp; Kansas 24/7.</span></p>
       </div>
 
     </div>
   </div>
 </section>
 
-
 <!-- ============================================================
      CONTACT SECTION
      ============================================================ -->
-<section id="contact" class="py-16 md:py-24 bg-white">
+<section id="contact" class="py-10 md:py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
 
     <!-- Section header -->
@@ -740,8 +813,7 @@
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Call Us</p>
-            <a href="tel:8162899600" class="text-brand hover:text-brand-dark font-bold text-xl block leading-tight">816.289.9600</a>
-            <p class="text-gray-400 text-xs mt-0.5">Emergency line available 24/7</p>
+            <a href="tel:8162899600" class="text-gray-500 hover:text-brand text-sm block">816.289.9600</a>
           </div>
         </div>
 
@@ -751,9 +823,7 @@
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Email Us</p>
-            <a href="mailto:contact@natesdoorservice.com" class="text-brand hover:text-brand-dark text-sm transition-colors">
-              contact@natesdoorservice.com
-            </a>
+            <a href="mailto:contact@natesdoorservice.com" class="text-gray-500 hover:text-brand text-sm transition-colors">contact@natesdoorservice.com</a>
           </div>
         </div>
 
@@ -763,8 +833,17 @@
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Business Hours</p>
-            <p class="text-gray-600 text-sm">Monday – Sunday: 8AM – 5PM</p>
-            <p class="text-brand text-sm font-semibold mt-0.5">Emergency service available after hours</p>
+            <p class="text-gray-500 text-sm">Mon – Sun: 8AM – 5PM</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 bg-brand-light rounded-xl flex items-center justify-center shrink-0">
+            <i class="fas fa-bolt text-brand"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Emergency Service</p>
+            <p class="text-gray-500 text-sm">Available after hours for emergencies</p>
           </div>
         </div>
 
@@ -774,16 +853,10 @@
           </div>
           <div>
             <p class="font-semibold text-gray-900 text-sm">Service Area</p>
-            <p class="text-gray-600 text-sm">Greater Kansas City Area – Missouri &amp; Kansas</p>
+            <p class="text-gray-500 text-sm">Greater Kansas City Area – Missouri &amp; Kansas</p>
           </div>
         </div>
 
-        <!-- Social icons -->
-        <div class="flex gap-3 pt-1">
-          <a href="#" aria-label="Facebook"  class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-facebook-f text-sm"></i></a>
-          <a href="#" aria-label="Google"    class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-google text-sm"></i></a>
-          <a href="#" aria-label="Instagram" class="w-10 h-10 bg-brand hover:bg-brand-dark text-white rounded-full flex items-center justify-center transition-colors shadow-sm"><i class="fab fa-instagram text-sm"></i></a>
-        </div>
 
       </div>
 
@@ -830,7 +903,7 @@
      ============================================================ -->
 <footer class="bg-gray-900 text-white pt-12 pb-8">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-8 mb-10">
+    <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
 
       <!-- Brand blurb -->
       <div>
@@ -841,14 +914,9 @@
             <div class="text-xs text-gray-400">Excellence in Every Installation</div>
           </div>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+        <p class="text-gray-400 text-sm leading-relaxed">
           Kansas City's trusted garage door experts since 2010. Serving the entire KC metro with pride, integrity, and craftsmanship.
         </p>
-        <div class="flex gap-3">
-          <a href="#" aria-label="Facebook"  class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Google"    class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-google"></i></a>
-          <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
-        </div>
       </div>
 
       <!-- Quick links -->
@@ -866,9 +934,10 @@
       <!-- Contact info -->
       <div>
         <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
+
         <ul class="space-y-2.5 text-sm text-gray-400">
           <li class="flex items-center gap-2.5">
-            <i class="fas fa-phone animate-ring text-brand-mid w-4"></i>
+            <i class="fas fa-phone text-brand-mid w-4"></i>
             <a href="tel:8162899600" class="hover:text-white transition-colors">816.289.9600</a>
           </li>
           <li class="flex items-center gap-2.5">
@@ -884,6 +953,16 @@
             <span>Mon–Sun 8AM–5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
           </li>
         </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
+        <div class="flex gap-2">
+          <a href="#" aria-label="Facebook"  class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+          <a href="#" aria-label="Google"    class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-google text-xs"></i></a>
+          <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+        </div>
       </div>
 
     </div>
@@ -911,6 +990,36 @@
       <i class="fas fa-phone animate-ring text-xs"></i> 816.289.9600
     </a>
   </div>
+</div>
+
+
+<!-- ============================================================
+     LIGHTBOX MODAL
+     ============================================================ -->
+<div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4">
+
+  <!-- Close -->
+  <button id="lightbox-close" class="absolute top-4 right-5 text-white/70 hover:text-white text-3xl leading-none transition-colors" aria-label="Close">&times;</button>
+
+  <!-- Counter -->
+  <div id="lightbox-count" class="absolute top-5 left-1/2 -translate-x-1/2 text-white/50 text-sm tabular-nums"></div>
+
+  <!-- Prev -->
+  <button id="lightbox-prev" class="absolute left-3 md:left-6 text-white/60 hover:text-white transition-colors p-2" aria-label="Previous">
+    <i class="fas fa-chevron-left text-2xl md:text-3xl"></i>
+  </button>
+
+  <!-- Image -->
+  <div class="max-w-4xl w-full mx-12 md:mx-20">
+    <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl transition-opacity duration-150" />
+    <p id="lightbox-alt" class="text-center text-white/50 text-xs mt-3"></p>
+  </div>
+
+  <!-- Next -->
+  <button id="lightbox-next" class="absolute right-3 md:right-6 text-white/60 hover:text-white transition-colors p-2" aria-label="Next">
+    <i class="fas fa-chevron-right text-2xl md:text-3xl"></i>
+  </button>
+
 </div>
 
 
@@ -1022,6 +1131,84 @@
     }, step);
   }, { threshold: 0.5 });
   countObserver.observe(jobsEl);
+
+  /* ---- Gallery Lightbox ---- */
+  const galleryImages = [
+    { src: 'photos/Gallery1.webp',  alt: 'Garage door project 1'  },
+    { src: 'photos/Gallery2.webp',  alt: 'Garage door project 2'  },
+    { src: 'photos/Gallery3.webp',  alt: 'Garage door project 3'  },
+    { src: 'photos/Gallery4.webp',  alt: 'Garage door project 4'  },
+    { src: 'photos/Gallery5.webp',  alt: 'Garage door project 5'  },
+    { src: 'photos/Gallery6.webp',  alt: 'Garage door project 6'  },
+    { src: 'photos/Gallery7.webp',  alt: 'Garage door project 7'  },
+    { src: 'photos/Gallery8.webp',  alt: 'Garage door project 8'  },
+    { src: 'photos/Gallery9.webp',  alt: 'Garage door project 9'  },
+    { src: 'photos/Gallery10.jpg',  alt: 'Garage door project 10' },
+  ];
+
+  let currentIndex = 0;
+
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = document.getElementById('lightbox-img');
+  const lightboxAlt   = document.getElementById('lightbox-alt');
+  const lightboxCount = document.getElementById('lightbox-count');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev  = document.getElementById('lightbox-prev');
+  const lightboxNext  = document.getElementById('lightbox-next');
+
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  function updateLightbox() {
+    const item = galleryImages[currentIndex];
+    lightboxImg.style.opacity = '0';
+    setTimeout(() => {
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.alt;
+      lightboxAlt.textContent = item.alt;
+      lightboxCount.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+      lightboxImg.style.opacity = '1';
+    }, 150);
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(el => {
+    el.addEventListener('click', () => openLightbox(parseInt(el.dataset.index)));
+  });
+
+  document.getElementById('gallery-see-more').addEventListener('click', () => openLightbox(0));
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightbox();
+  });
+  lightboxNext.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    updateLightbox();
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
+    if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % galleryImages.length; updateLightbox(); }
+  });
+
 </script>
 
 </body>
