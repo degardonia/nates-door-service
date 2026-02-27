@@ -117,6 +117,164 @@
     }
 
   </style>
+
+  <!-- ============================================================
+       STRUCTURED DATA — JSON-LD Schema
+       ============================================================ -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+      "name": "Nate's Door Service",
+      "url": "https://www.natesdoorservice.com/",
+      "telephone": "+18162899600",
+      "email": "contact@natesdoorservice.com",
+      "description": "Residential and commercial garage door installation, repair, and maintenance serving the Greater Kansas City Area in Missouri and Kansas.",
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Missouri"
+        },
+        {
+          "@type": "State",
+          "name": "Kansas"
+        },
+        {
+          "@type": "Place",
+          "name": "Greater Kansas City Area"
+        }
+      ],
+      "serviceType": [
+        "Garage Door Repair",
+        "Garage Door Installation",
+        "Garage Door Spring Replacement",
+        "Garage Door Opener Repair",
+        "Commercial Garage Door Service"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday",
+          "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com",
+        "https://www.google.com"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Garage Door Installation and Repair",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Nate's Door Service",
+        "url": "https://www.natesdoorservice.com/"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Greater Kansas City Area – Missouri and Kansas"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Garage Door Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Residential Garage Door Repair" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Residential Garage Door Installation" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Commercial Garage Door Service" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Garage Door Spring Replacement" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Garage Door Opener Installation & Repair" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Emergency Garage Door Repair" }
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer same-day garage door repair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide same-day service whenever possible for most residential and commercial garage door issues. Our technicians arrive fully equipped to complete most repairs in a single visit so your door is back working quickly and safely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does garage door repair typically cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Repair costs vary depending on the issue, parts required, and door type. After inspecting the door, we provide clear upfront pricing before any work begins — no surprises. Many common repairs like spring or opener adjustments can be completed quickly and affordably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you repair both residential and commercial garage doors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We service and install both residential and commercial garage doors, including openers, springs, tracks, panels, and full door replacements. Whether it's a home garage or a business facility, we have the experience to handle it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are signs my garage door spring is broken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common signs include a loud bang from the garage, the door feeling extremely heavy, the opener struggling, or the door not opening at all. Broken springs can be dangerous — we recommend professional replacement rather than attempting DIY repairs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer emergency or after-hours service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Garage door problems don't always happen during business hours. We offer emergency service for urgent situations like doors stuck open, vehicles trapped inside, or security concerns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a garage door installation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most standard garage door installations are completed within a few hours. Timing depends on the door type and setup, but our goal is always efficient installation with minimal disruption to your day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We proudly serve homeowners and businesses throughout the Greater Kansas City area, including both Missouri and Kansas communities. If you're unsure whether you're in our service area, just give us a call — we're happy to help."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+
 </head>
 
 <body class="font-sans text-gray-900 bg-white antialiased">
