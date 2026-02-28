@@ -92,6 +92,11 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+/* Pricing page */
+app.get('/pricing', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pricing', 'index.html'));
+});
+
 /* About Nate page */
 app.get('/about-nate', (req, res) => {
   res.sendFile(path.join(__dirname, 'about-nate', 'index.html'));
