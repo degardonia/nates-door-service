@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garage Door Won't Open? Here's What to Check First | Nate's Door Service</title>
+  <meta name="description" content="Walk through the most common reasons a garage door won't open — dead remotes, broken springs, power outages, and more. Know what's safe to fix yourself and when to call a pro." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand:        '#1d4ed8',
+            'brand-dark': '#1e3a8a',
+            'brand-mid':  '#3b82f6',
+            'brand-light':'#dbeafe',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { padding-bottom: 80px; }
+
+    @keyframes ring {
+      0%   { transform: rotate(0deg); }
+      5%   { transform: rotate(5deg); }
+      10%  { transform: rotate(-5deg); }
+      15%  { transform: rotate(4deg); }
+      20%  { transform: rotate(-4deg); }
+      25%  { transform: rotate(3deg); }
+      30%  { transform: rotate(-2deg); }
+      35%  { transform: rotate(1deg); }
+      40%  { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .animate-ring {
+      display: inline-block;
+      animation: ring 2.5s ease-in-out infinite;
+      transform-origin: top center;
+    }
+
+    /* Prose styles for article body */
+    .prose h2 {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin-top: 2.25rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .prose h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .prose p {
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .prose ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ul li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+    .prose ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+    }
+    .prose ol {
+      counter-reset: list-counter;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .prose ol li {
+      color: #374151;
+      line-height: 1.75;
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+      counter-increment: list-counter;
+    }
+    .prose ol li::before {
+      content: counter(list-counter);
+      position: absolute;
+      left: 0;
+      top: 0.05rem;
+      background: #1d4ed8;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prose strong { color: #111827; }
+    .prose a { color: #1d4ed8; text-decoration: underline; }
+    .prose a:hover { color: #1e3a8a; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 no-underline">
+      <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none select-none">N</div>
+      <div>
+        <div class="font-black text-brand-dark text-base sm:text-lg leading-tight">Nate's Door Service</div>
+        <div class="text-xs text-gray-400 leading-tight hidden sm:block">Excellence in Every Installation</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="hidden lg:flex items-center gap-6">
+      <a href="/#services"     class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Services</a>
+      <a href="/#gallery"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Gallery</a>
+      <a href="/#about"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About</a>
+      <a href="/#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
+      <a href="/#service-area" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Area</a>
+      <a href="/#faq"          class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">FAQ</a>
+      <a href="/#contact"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
+      <a href="/blog"          class="text-brand font-semibold text-sm transition-colors">Blog</a>
+      <a href="tel:8162899600"
+         class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
+        <i class="fas fa-phone animate-ring text-xs"></i> Call Now
+      </a>
+    </div>
+
+    <!-- Mobile hamburger button -->
+    <button id="hamburger" class="lg:hidden text-gray-600 hover:text-brand focus:outline-none p-1" aria-label="Toggle menu" aria-expanded="false">
+      <i id="hamburger-icon" class="fas fa-bars text-2xl"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+    <nav class="flex flex-col gap-1">
+      <a href="/#services"     onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Services</a>
+      <a href="/#gallery"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Gallery</a>
+      <a href="/#about"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Us</a>
+      <a href="/#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
+      <a href="/#service-area" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Area</a>
+      <a href="/#faq"          onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">FAQ</a>
+      <a href="/#contact"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
+      <a href="/blog"          onclick="closeMobileMenu()" class="text-brand font-semibold py-2.5 border-b border-gray-50 text-sm">Blog</a>
+      <a href="tel:8162899600"
+         class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
+        <i class="fas fa-phone animate-ring"></i> 816.289.9600
+      </a>
+    </nav>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ ARTICLE HEADER ═══════════════════════════ -->
+<section class="bg-brand-dark text-white py-14 px-4">
+  <div class="max-w-3xl mx-auto">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-blue-300 mb-5 flex items-center gap-2">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <span class="text-blue-200">Garage Door Won't Open</span>
+    </nav>
+
+    <div class="flex items-center gap-2 mb-4">
+      <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Repairs</span>
+      <span class="text-blue-300 text-sm">Feb 27, 2026</span>
+      <span class="text-blue-500 text-sm">&bull;</span>
+      <span class="text-blue-300 text-sm">8 min read</span>
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-4">
+      Garage Door Won't Open? Here's What to Check First
+    </h1>
+    <p class="text-blue-200 text-lg leading-relaxed max-w-2xl">
+      Walk through the most common reasons a garage door refuses to open — and find out what you can safely fix yourself vs. when to call a pro.
+    </p>
+
+    <div class="mt-6 flex items-center gap-3">
+      <div class="bg-brand text-white rounded-full w-9 h-9 flex items-center justify-center font-black text-sm">N</div>
+      <div>
+        <div class="font-semibold text-sm text-white">Nate's Door Service</div>
+        <div class="text-xs text-blue-300">Kansas City Garage Door Experts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ ARTICLE BODY ═══════════════════════════ -->
+<div class="max-w-3xl mx-auto px-4 py-12">
+  <div class="grid lg:grid-cols-[1fr_260px] gap-10 items-start">
+
+    <!-- Main content -->
+    <article class="prose">
+
+      <p>
+        You're running late, you hit the button, and nothing happens. Or the door groans, starts to move, then stops dead. It's one of the most frustrating things a homeowner can face — especially when you're trapped in the garage with somewhere to be.
+      </p>
+      <p>
+        Before you panic (or call us at <a href="tel:8162899600">816.289.9600</a>), work through this checklist. Most garage door problems are caused by a handful of very common issues — and some of them you can fix in five minutes.
+      </p>
+
+      <h2>1. Check the Remote Batteries First</h2>
+      <p>
+        It sounds obvious, but dead or dying remote batteries are the number-one cause of a "garage door won't open" call. Remote batteries typically last one to two years depending on use.
+      </p>
+      <ul>
+        <li>Replace both batteries in the remote (even if one still tests okay)</li>
+        <li>Try the wall-mounted button inside the garage — if it works, the remote is the problem</li>
+        <li>Stand closer to the opener when testing — a weak battery may only work at short range</li>
+      </ul>
+      <p>
+        If the wall button works but the remote doesn't after fresh batteries, the remote may need to be reprogrammed. Check your opener's manual or look up your model online — it's usually a two-step process.
+      </p>
+
+      <h2>2. Is the Opener Getting Power?</h2>
+      <p>
+        If nothing happens when you press either the remote or the wall button, the opener itself may have lost power.
+      </p>
+      <ul>
+        <li>Check that the opener is plugged into its outlet (the plug can vibrate loose over time)</li>
+        <li>Check your circuit breaker or GFCI outlet — the circuit may have tripped</li>
+        <li>If you have a power outage, use the red emergency release cord to open the door manually (more on this below)</li>
+      </ul>
+
+      <h2>3. Look for the Lock Button or "Vacation Mode"</h2>
+      <p>
+        Many wall panels have a lock button that disables all remotes — only the wall button will work while it's active. It's easy to hit accidentally. Look for a button labeled <strong>Lock</strong> or a padlock icon on your wall panel and make sure it's not lit up.
+      </p>
+
+      <h2>4. Check the Safety Sensors</h2>
+      <p>
+        Every modern garage door opener has two photo-eye sensors mounted near the floor on either side of the door opening. If anything blocks the beam between them — or if a sensor is knocked out of alignment — the opener will refuse to close (and sometimes refuse to open as well).
+      </p>
+      <ul>
+        <li>Look for a small LED on each sensor. Both should be solid (not blinking)</li>
+        <li>A blinking or orange/amber light means the sensors aren't aligned or something is in the way</li>
+        <li>Gently realign the sensors so they point directly at each other, then tighten the wing nut to hold them in place</li>
+        <li>Wipe the sensor lenses with a dry cloth — dirt and spider webs are common culprits</li>
+      </ul>
+      <p>
+        If you can close the door while holding the wall button down (most openers allow this in an override mode), misaligned sensors are almost certainly the cause.
+      </p>
+
+      <h2>5. The Door Is Manually Locked</h2>
+      <p>
+        Garage doors have a manual slide lock — a horizontal bar on the inside of the door that slides into the track on either side. If this is engaged (perhaps by a family member who locked it manually), the opener motor will strain, trip a safety feature, and stop. 
+      </p>
+      <p>
+        Look for a center-mounted handle or a horizontal bar across the door on the inside and make sure it's fully retracted to the center.
+      </p>
+
+      <h2>6. The Door Is Off the Tracks</h2>
+      <p>
+        A door that's jumped its track will either refuse to move or move only partway before stopping. You might hear grinding or see the door tilting unevenly.
+      </p>
+      <p>
+        <strong>Do not force the door open or closed if you suspect it's off the tracks.</strong> You risk bending the tracks further, damaging the panels, or causing injury. This is a job for a technician.
+      </p>
+
+      <h2>7. Broken Springs — The Most Common Serious Cause</h2>
+      <p>
+        Garage door springs are under enormous tension and do most of the heavy lifting when the door opens. When a spring breaks, you'll often hear a loud bang (like a gunshot) from the garage. The door will then feel extremely heavy and the opener — if it tries at all — won't have enough force to raise it.
+      </p>
+      <p>
+        To check: look at the large torsion spring above the door (or the two extension springs running parallel to the horizontal tracks on older doors). A broken torsion spring will have a visible gap in the coil.
+      </p>
+
+      <!-- Warning box -->
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 my-6">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-exclamation-triangle text-red-500 mt-0.5 text-lg flex-shrink-0"></i>
+          <div>
+            <p class="font-bold text-red-800 mb-1">Do not attempt to replace garage door springs yourself.</p>
+            <p class="text-red-700 text-sm leading-relaxed">Torsion springs store hundreds of foot-pounds of energy. Improper handling has caused serious injuries and fatalities. Spring replacement requires specialized winding bars, training, and experience. Always call a professional.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>8. The Opener Limits or Force Settings Are Off</h2>
+      <p>
+        Garage door openers have adjustable travel-limit and force settings that control how far the door travels and how hard the motor pushes. If these drift out of calibration, the opener may stop short of fully opening — or not open at all.
+      </p>
+      <p>
+        Most openers have small adjustment screws on the back or side of the motor unit labeled <strong>Up Limit</strong>, <strong>Down Limit</strong>, <strong>Up Force</strong>, and <strong>Down Force</strong>. Refer to your model's manual for adjustment instructions. On newer "smart" openers, these settings are in the app.
+      </p>
+
+      <h2>9. The Disconnect Cord Was Pulled</h2>
+      <p>
+        Every garage door opener has a red emergency release cord that disconnects the door from the drive mechanism so it can be opened manually. If this was pulled (during a power outage, for example) the opener will run but won't move the door.
+      </p>
+      <p>
+        To reconnect: manually slide the door until it aligns with the carriage, then pull the emergency release cord toward the door (not straight down) until you hear or feel it click back into the drive. Now try the opener again.
+      </p>
+
+      <h2>10. Stripped or Broken Drive Gear</h2>
+      <p>
+        The drive gear is the small plastic gear inside the opener motor assembly that engages the chain, belt, or screw. These gears wear out over time — especially on older chain-drive openers. If you hear the motor running but the door isn't moving and there are no broken springs, a stripped gear is likely the cause.
+      </p>
+      <p>
+        Drive gear replacement kits are available for most opener models, and a technician can typically replace one in under an hour.
+      </p>
+
+      <h2>Quick Reference: What You Can Fix vs. What Needs a Pro</h2>
+
+      <!-- DIY vs Pro table -->
+      <div class="overflow-x-auto my-6 rounded-xl border border-gray-200">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-brand-light">
+              <th class="text-left px-4 py-3 font-bold text-brand-dark">Issue</th>
+              <th class="text-center px-4 py-3 font-bold text-brand-dark">DIY?</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">Dead remote batteries</td><td class="px-4 py-3 text-center"><span class="text-green-600 font-bold">✓ Yes</span></td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">Tripped circuit breaker</td><td class="px-4 py-3 text-center"><span class="text-green-600 font-bold">✓ Yes</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">Lock button engaged</td><td class="px-4 py-3 text-center"><span class="text-green-600 font-bold">✓ Yes</span></td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">Sensor alignment / cleaning</td><td class="px-4 py-3 text-center"><span class="text-green-600 font-bold">✓ Yes</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">Reconnecting the disconnect cord</td><td class="px-4 py-3 text-center"><span class="text-green-600 font-bold">✓ Yes</span></td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">Reprogramming remote</td><td class="px-4 py-3 text-center"><span class="text-yellow-600 font-bold">~ Maybe</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">Adjusting opener limits/force</td><td class="px-4 py-3 text-center"><span class="text-yellow-600 font-bold">~ Maybe</span></td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">Door off the tracks</td><td class="px-4 py-3 text-center"><span class="text-red-600 font-bold">✗ Call a pro</span></td></tr>
+            <tr class="bg-white"><td class="px-4 py-3 text-gray-700">Broken torsion/extension springs</td><td class="px-4 py-3 text-center"><span class="text-red-600 font-bold">✗ Call a pro</span></td></tr>
+            <tr class="bg-gray-50"><td class="px-4 py-3 text-gray-700">Stripped drive gear</td><td class="px-4 py-3 text-center"><span class="text-red-600 font-bold">✗ Call a pro</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Still Stuck? We're One Call Away.</h2>
+      <p>
+        If you've worked through this list and the door still won't cooperate, it's time to call in a professional. At Nate's Door Service, we serve the entire Kansas City metro — Missouri and Kansas — with same-day service on most repairs.
+      </p>
+      <p>
+        Give us a call at <a href="tel:8162899600"><strong>816.289.9600</strong></a> or <a href="/#contact">send us a message</a>. We'll get your door moving again.
+      </p>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6 lg:sticky lg:top-24">
+
+      <!-- CTA card -->
+      <div class="bg-brand-dark text-white rounded-2xl p-6 text-center shadow-lg">
+        <div class="bg-brand/30 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-phone text-white text-lg animate-ring"></i>
+        </div>
+        <p class="font-black text-lg mb-1">Need a hand?</p>
+        <p class="text-blue-200 text-sm mb-4 leading-relaxed">Same-day service available across Kansas City.</p>
+        <a href="tel:8162899600"
+           class="block bg-white text-brand font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
+          816.289.9600
+        </a>
+        <a href="/#contact"
+           class="block mt-2 border border-white/30 text-white font-semibold py-3 rounded-xl hover:bg-white/10 transition-colors text-sm">
+          Request a Quote
+        </a>
+      </div>
+
+      <!-- About card -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-2">About the Author</p>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-sm flex-shrink-0">N</div>
+          <div>
+            <p class="font-bold text-sm text-gray-900">Nate's Door Service</p>
+            <p class="text-xs text-gray-500">15+ years in Kansas City</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm leading-relaxed">Kansas City's trusted garage door experts since 2010, serving the entire KC metro with residential and commercial installation, repair, and spring replacement.</p>
+      </div>
+
+      <!-- More articles -->
+      <div class="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+        <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">More Articles</p>
+        <div class="space-y-3">
+          <div class="text-sm text-gray-400 flex items-start gap-2">
+            <i class="fas fa-tools text-gray-300 mt-0.5 flex-shrink-0"></i>
+            <span>How Long Do Garage Door Springs Last? <span class="text-xs">(coming soon)</span></span>
+          </div>
+          <div class="text-sm text-gray-400 flex items-start gap-2">
+            <i class="fas fa-door-open text-gray-300 mt-0.5 flex-shrink-0"></i>
+            <span>Steel vs. Wood Garage Doors <span class="text-xs">(coming soon)</span></span>
+          </div>
+          <div class="text-sm text-gray-400 flex items-start gap-2">
+            <i class="fas fa-shield-alt text-gray-300 mt-0.5 flex-shrink-0"></i>
+            <span>5 Garage Door Safety Tips <span class="text-xs">(coming soon)</span></span>
+          </div>
+        </div>
+        <a href="/blog" class="mt-4 flex items-center gap-1 text-brand text-sm font-semibold hover:text-brand-dark">
+          View all posts <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
+<section class="bg-brand py-12 px-4 text-white text-center">
+  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Need help now?</p>
+  <h2 class="text-2xl sm:text-3xl font-black mb-4">Kansas City's Garage Door Experts</h2>
+  <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Same-day service available. Call or text — we pick up.</p>
+  <a href="tel:8162899600"
+     class="inline-flex items-center gap-2 bg-white text-brand font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors shadow-lg text-sm">
+    <i class="fas fa-phone animate-ring"></i> 816.289.9600
+  </a>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="bg-gray-900 text-white pt-12 pb-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
+
+      <!-- Brand blurb -->
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none">N</div>
+          <div>
+            <div class="font-black text-lg leading-tight">Nate's Door Service</div>
+            <div class="text-xs text-gray-400">Excellence in Every Installation</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Kansas City's trusted garage door experts since 2010. Serving the entire KC metro with pride, integrity, and craftsmanship.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/#services"     class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="/#about"        class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="/#testimonials" class="hover:text-white transition-colors">Reviews</a></li>
+          <li><a href="/#service-area" class="hover:text-white transition-colors">Service Area</a></li>
+          <li><a href="/#contact"      class="hover:text-white transition-colors">Contact</a></li>
+          <li><a href="/blog"          class="hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-phone text-brand-mid w-4"></i>
+            <a href="tel:8162899600" class="hover:text-white transition-colors">816.289.9600</a>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-envelope text-brand-mid w-4"></i>
+            <a href="mailto:contact@natesdoorservice.com" class="hover:text-white transition-colors">contact@natesdoorservice.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-map-marker-alt text-brand-mid w-4 mt-0.5"></i>
+            <span>Greater Kansas City Area – Missouri &amp; Kansas</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-clock text-brand-mid w-4 mt-0.5"></i>
+            <span>Mon–Sun 8AM–5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
+        <div class="flex gap-2">
+          <a href="#" aria-label="Facebook"  class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+          <a href="#" aria-label="Google"    class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-google text-xs"></i></a>
+          <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+      &copy; 2026 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area – Missouri &amp; Kansas
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+<script>
+  const hamburger    = document.getElementById('hamburger');
+  const mobileMenu   = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburgerIcon.className = 'fas fa-bars text-2xl';
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+</script>
+
+</body>
+</html>

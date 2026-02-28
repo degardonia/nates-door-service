@@ -92,6 +92,18 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+/* Blog routes — serve the static HTML files in the blog/ directory */
+app.get('/blog', (req, res) => {
+  res.sendFile(path.join(__dirname, 'blog', 'index.html'));
+});
+
+app.get('/blog/:slug', (req, res) => {
+  const filePath = path.join(__dirname, 'blog', req.params.slug, 'index.html');
+  res.sendFile(filePath, err => {
+    if (err) res.status(404).sendFile(path.join(__dirname, 'blog', 'index.html'));
+  });
+});
+
 /* Fallback: serve index.html for any unmatched route */
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
