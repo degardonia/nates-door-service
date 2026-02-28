@@ -92,6 +92,11 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+/* Service areas page */
+app.get('/garage-door-service-areas-kansas-city', (req, res) => {
+  res.sendFile(path.join(__dirname, 'garage-door-service-areas-kansas-city', 'index.html'));
+});
+
 /* Blog routes — serve the static HTML files in the blog/ directory */
 app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, 'blog', 'index.html'));
