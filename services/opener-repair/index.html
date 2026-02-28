@@ -97,11 +97,11 @@
     </div>
 
     <button id="hamburger" class="lg:hidden text-gray-600 hover:text-brand focus:outline-none p-1" aria-label="Toggle menu" aria-expanded="false">
-      <i id="hamburger-icon" class="fas fa-bars text-2xl"></i>
+      <i id="hamburger-icon" class="fas fa-chevron-down text-lg"></i>
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+  <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-4 pb-5 pt-3 z-50">
     <nav class="flex flex-col gap-1">
       <div class="border-b border-gray-100 pb-1 mb-0.5">
         <p class="text-xs font-bold uppercase tracking-widest text-gray-400 pt-2.5 pb-1.5 px-0.5">Services</p>
@@ -519,7 +519,7 @@
   hamburger.addEventListener('click', () => {
     const isOpen = !mobileMenu.classList.contains('hidden');
     mobileMenu.classList.toggle('hidden', isOpen);
-    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+    hamburgerIcon.className = isOpen ? 'fas fa-chevron-down text-lg' : 'fas fa-chevron-up text-lg';
     hamburger.setAttribute('aria-expanded', String(!isOpen));
   });
 
@@ -549,7 +549,7 @@
 
   function closeMobileMenu() {
     mobileMenu.classList.add('hidden');
-    hamburgerIcon.className = 'fas fa-bars text-2xl';
+    hamburgerIcon.className = 'fas fa-chevron-down text-lg';
     hamburger.setAttribute('aria-expanded', 'false');
   }
 
