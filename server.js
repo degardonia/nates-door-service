@@ -104,6 +104,14 @@ app.get('/blog/:slug', (req, res) => {
   });
 });
 
+/* Service page routes — serve static HTML from the services/ directory */
+app.get('/services/:slug', (req, res) => {
+  const filePath = path.join(__dirname, 'services', req.params.slug, 'index.html');
+  res.sendFile(filePath, err => {
+    if (err) res.status(404).sendFile(path.join(__dirname, 'index.html'));
+  });
+});
+
 /* Fallback: serve index.html for any unmatched route */
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

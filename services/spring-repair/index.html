@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garage Door Spring Repair & Replacement | Nate's Door Service | Kansas City</title>
+  <meta name="description" content="Broken garage door spring in Kansas City? Nate's Door Service provides fast, safe torsion and extension spring repair and replacement. Same-day service available. Call 816.289.9600." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand:        '#1d4ed8',
+            'brand-dark': '#1e3a8a',
+            'brand-mid':  '#3b82f6',
+            'brand-light':'#dbeafe',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { padding-bottom: 80px; }
+
+    @keyframes ring {
+      0%   { transform: rotate(0deg); }
+      5%   { transform: rotate(5deg); }
+      10%  { transform: rotate(-5deg); }
+      15%  { transform: rotate(4deg); }
+      20%  { transform: rotate(-4deg); }
+      25%  { transform: rotate(3deg); }
+      30%  { transform: rotate(-2deg); }
+      35%  { transform: rotate(1deg); }
+      40%  { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .animate-ring {
+      display: inline-block;
+      animation: ring 2.5s ease-in-out infinite;
+      transform-origin: top center;
+    }
+
+    .faq-answer { display: none; }
+    .faq-answer.open { display: block; }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<nav id="navbar" class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5 no-underline">
+      <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none select-none">N</div>
+      <div>
+        <div class="font-black text-brand-dark text-base sm:text-lg leading-tight">Nate's Door Service</div>
+        <div class="text-xs text-gray-400 leading-tight hidden sm:block">Excellence in Every Installation</div>
+      </div>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-6">
+
+      <!-- Services dropdown -->
+      <div class="relative" id="services-dropdown-wrapper">
+        <button id="services-dropdown-btn"
+                class="text-gray-600 hover:text-brand font-medium text-sm transition-colors flex items-center gap-1.5">
+          Services <i class="fas fa-chevron-down text-xs transition-transform" id="services-dropdown-icon"></i>
+        </button>
+        <div id="services-dropdown"
+             class="hidden absolute top-full left-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+          <a href="/services/spring-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
+          <a href="/services/opener-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+          <a href="/services/garage-door-repair" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
+        </div>
+      </div>
+
+      <a href="/#gallery"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Gallery</a>
+      <a href="/#about"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About</a>
+      <a href="/#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
+      <a href="/#service-area" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Area</a>
+      <a href="/#faq"          class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">FAQ</a>
+      <a href="/#contact"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
+      <a href="/blog"          class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Blog</a>
+      <a href="tel:8162899600"
+         class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
+        <i class="fas fa-phone animate-ring text-xs"></i> Call Now
+      </a>
+    </div>
+
+    <button id="hamburger" class="lg:hidden text-gray-600 hover:text-brand focus:outline-none p-1" aria-label="Toggle menu" aria-expanded="false">
+      <i id="hamburger-icon" class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+    <nav class="flex flex-col gap-1">
+      <div class="border-b border-gray-100 pb-1 mb-0.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 pt-2.5 pb-1.5 px-0.5">Services</p>
+        <a href="/services/spring-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
+        <a href="/services/opener-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+        <a href="/services/garage-door-repair" onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
+      </div>
+      <a href="/#gallery"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Gallery</a>
+      <a href="/#about"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Us</a>
+      <a href="/#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
+      <a href="/#service-area" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Area</a>
+      <a href="/#faq"          onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">FAQ</a>
+      <a href="/#contact"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
+      <a href="/blog"          onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Blog</a>
+      <a href="tel:8162899600"
+         class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
+        <i class="fas fa-phone animate-ring"></i> 816.289.9600
+      </a>
+    </nav>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="bg-brand-dark text-white py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <nav class="text-sm text-blue-300 mb-5 flex items-center gap-2">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <a href="/#services" class="hover:text-white transition-colors">Services</a>
+      <i class="fas fa-chevron-right text-xs text-blue-500"></i>
+      <span class="text-blue-200">Spring Repair & Replacement</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-brand/40 text-blue-200 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          <i class="fas fa-tools text-brand-mid"></i> Most Common Garage Door Repair
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-4">
+          Garage Door Spring<br />Repair & Replacement
+        </h1>
+        <p class="text-blue-200 text-lg leading-relaxed mb-6 max-w-lg">
+          A broken spring means your door isn't going anywhere — and it's not safe to force it. Nate's team replaces torsion and extension springs the same day, usually within a few hours of your call.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:8162899600"
+             class="inline-flex items-center gap-2 bg-white text-brand font-bold px-7 py-3.5 rounded-full hover:bg-blue-50 transition-colors shadow-lg text-sm">
+            <i class="fas fa-phone animate-ring"></i> 816.289.9600
+          </a>
+          <a href="/#contact"
+             class="inline-flex items-center gap-2 border-2 border-white/40 text-white font-semibold px-6 py-3.5 rounded-full hover:bg-white/10 transition-colors text-sm">
+            Request a Quote
+          </a>
+        </div>
+        <p class="mt-4 text-blue-300 text-xs flex items-center gap-1.5">
+          <i class="fas fa-check-circle text-green-400"></i> Same-day service available &nbsp;&bull;&nbsp;
+          <i class="fas fa-check-circle text-green-400"></i> Kansas City metro
+        </p>
+      </div>
+
+      <div class="hidden lg:grid grid-cols-2 gap-4">
+        <div class="bg-white/10 rounded-2xl p-5 text-center">
+          <i class="fas fa-bolt text-3xl text-brand-mid mb-3"></i>
+          <p class="font-bold text-sm">Same-Day Service</p>
+          <p class="text-blue-300 text-xs mt-1">Most repairs done within hours</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 text-center">
+          <i class="fas fa-shield-alt text-3xl text-brand-mid mb-3"></i>
+          <p class="font-bold text-sm">Safety First</p>
+          <p class="text-blue-300 text-xs mt-1">High-tension springs handled by pros</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 text-center">
+          <i class="fas fa-star text-3xl text-yellow-400 mb-3"></i>
+          <p class="font-bold text-sm">15+ Years Experience</p>
+          <p class="text-blue-300 text-xs mt-1">Hundreds of springs replaced</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 text-center">
+          <i class="fas fa-tools text-3xl text-brand-mid mb-3"></i>
+          <p class="font-bold text-sm">All Spring Types</p>
+          <p class="text-blue-300 text-xs mt-1">Torsion &amp; extension springs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ WARNING CALLOUT ═══════════════════════════ -->
+<div class="bg-amber-50 border-l-4 border-amber-400 px-4 py-4">
+  <div class="max-w-6xl mx-auto flex items-start gap-3">
+    <i class="fas fa-exclamation-triangle text-amber-500 mt-0.5 flex-shrink-0"></i>
+    <p class="text-amber-800 text-sm leading-relaxed">
+      <strong>Do not attempt to operate your door if you suspect a broken spring.</strong> Garage door springs are under extreme tension and can cause serious injury. Disconnect the opener and call a professional.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ SIGNS YOU NEED IT ═══════════════════════════ -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-brand text-sm font-bold uppercase tracking-widest mb-2">Know the Warning Signs</p>
+      <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">Signs Your Garage Door Spring Is Broken</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-door-open text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Door Won't Open at All</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">The opener motor strains or the door feels impossibly heavy when lifted manually. Springs bear most of the door's weight — without them, it can't move.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-volume-up text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Loud Bang from the Garage</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">A torsion spring snapping sounds like a firecracker going off. If you heard a loud pop, your spring has likely broken.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-eye text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Visible Gap in the Spring</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Look above the door when it's closed. A torsion spring with a visible gap or separation in its coils is broken and needs replacement.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-arrows-alt-v text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Door Opens Only a Few Inches</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Modern openers have auto-reverse protection that kicks in when the motor detects the extra strain of a broken spring, causing it to stop right away.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-balance-scale text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Door Feels Heavy or Off-Balance</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">If one side drops faster than the other or the door feels much heavier than usual, the springs may be worn or one has broken.</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <div class="bg-brand-light rounded-xl w-10 h-10 flex items-center justify-center mb-4">
+          <i class="fas fa-cable-car text-brand"></i>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Cables Are Loose or Dangling</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Extension spring systems use safety cables to contain the spring if it breaks. Loose, hanging cables often mean a spring has already let go.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ WHAT WE DO ═══════════════════════════ -->
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <p class="text-brand text-sm font-bold uppercase tracking-widest mb-2">What's Included</p>
+        <h2 class="text-2xl sm:text-3xl font-black text-brand-dark mb-6">Our Spring Repair Service</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="bg-brand rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Full inspection before any work begins</p>
+              <p class="text-gray-600 text-sm mt-0.5">We check both springs, cables, drums, and hardware so we don't miss anything that could fail next week.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-brand rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Torsion and extension spring replacement</p>
+              <p class="text-gray-600 text-sm mt-0.5">We stock high-cycle springs for residential and commercial doors of all sizes and weights.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-brand rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Both springs replaced together</p>
+              <p class="text-gray-600 text-sm mt-0.5">If one spring broke, the other is near the end of its life too. Replacing both now saves you a second service call soon.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-brand rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Balance test and tension adjustment</p>
+              <p class="text-gray-600 text-sm mt-0.5">After installation we test the door's balance and fine-tune spring tension so it opens smoothly and evenly.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-brand rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-check text-white text-xs"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Lubrication of all moving parts</p>
+              <p class="text-gray-600 text-sm mt-0.5">Springs, cables, rollers, and hinges get lubricated so everything moves quietly and wears evenly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-brand-dark text-white rounded-2xl p-8">
+        <p class="text-blue-300 text-xs uppercase tracking-widest font-semibold mb-4">Our Process</p>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="bg-brand rounded-full w-9 h-9 flex items-center justify-center font-black text-sm flex-shrink-0">1</div>
+            <div>
+              <p class="font-bold">You Call, We Show Up</p>
+              <p class="text-blue-200 text-sm mt-1 leading-relaxed">Schedule online or call us directly. Same-day slots available most days across the Kansas City metro.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="bg-brand rounded-full w-9 h-9 flex items-center justify-center font-black text-sm flex-shrink-0">2</div>
+            <div>
+              <p class="font-bold">Diagnose & Quote</p>
+              <p class="text-blue-200 text-sm mt-1 leading-relaxed">We inspect the full system, confirm what needs replacing, and give you a clear, upfront price before any work starts.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="bg-brand rounded-full w-9 h-9 flex items-center justify-center font-black text-sm flex-shrink-0">3</div>
+            <div>
+              <p class="font-bold">Install & Test</p>
+              <p class="text-blue-200 text-sm mt-1 leading-relaxed">New springs go in, everything gets lubricated and balanced, and we run the door through a full cycle to make sure it's right.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/20 text-center">
+          <p class="text-blue-200 text-sm mb-3">Ready to get your door working again?</p>
+          <a href="tel:8162899600"
+             class="inline-flex items-center gap-2 bg-white text-brand font-bold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-sm w-full justify-center">
+            <i class="fas fa-phone animate-ring"></i> 816.289.9600
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-brand text-sm font-bold uppercase tracking-widest mb-2">Common Questions</p>
+      <h2 class="text-2xl sm:text-3xl font-black text-brand-dark">Spring Repair FAQ</h2>
+    </div>
+
+    <div class="space-y-3" id="faq-list">
+
+      <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          How long do garage door springs typically last?
+          <i class="fas fa-chevron-down text-gray-400 text-sm flex-shrink-0 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-gray-600 text-sm leading-relaxed">Most standard springs are rated for about 10,000 cycles — roughly 7 to 10 years with average use (2–4 open/close cycles per day). High-cycle springs (20,000–30,000 cycles) are available and last significantly longer. If your door is older than 8 years and you've never had the springs replaced, they're worth inspecting.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          Should I replace both springs even if only one broke?
+          <i class="fas fa-chevron-down text-gray-400 text-sm flex-shrink-0 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-gray-600 text-sm leading-relaxed">Yes — and almost every professional will recommend it. Since both springs were installed at the same time and have the same amount of wear, the second spring usually fails within weeks or months of the first. Replacing both during the same visit saves you a second service call and keeps labor costs down.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          Can I replace garage door springs myself?
+          <i class="fas fa-chevron-down text-gray-400 text-sm flex-shrink-0 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-gray-600 text-sm leading-relaxed">Technically possible, but we strongly advise against it. Torsion springs are wound under hundreds of pounds of force. An improperly wound or released spring can snap violently and cause serious or fatal injuries. This is one of the few garage door repairs where the safety case for hiring a professional is overwhelming.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          What's the difference between torsion and extension springs?
+          <i class="fas fa-chevron-down text-gray-400 text-sm flex-shrink-0 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-gray-600 text-sm leading-relaxed">Torsion springs sit horizontally above the door and store energy by twisting. They're the most common type in newer and heavier doors and generally last longer. Extension springs run along the horizontal tracks on each side of the door and stretch to store energy. Both work well, but torsion springs are considered safer and more durable. We work with both types.</p>
+        </div>
+      </div>
+
+      <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+          How quickly can you get here for a broken spring?
+          <i class="fas fa-chevron-down text-gray-400 text-sm flex-shrink-0 transition-transform"></i>
+        </button>
+        <div class="faq-answer px-6 pb-5">
+          <p class="text-gray-600 text-sm leading-relaxed">Most days we can schedule a same-day or next-day appointment across the Kansas City metro. Call us at <a href="tel:8162899600" class="text-brand underline">816.289.9600</a> and we'll get you on the schedule as fast as possible.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CTA BANNER ═══════════════════════════ -->
+<section class="bg-brand py-12 px-4 text-white text-center">
+  <p class="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">Spring broken? Don't wait.</p>
+  <h2 class="text-2xl sm:text-3xl font-black mb-4">Same-Day Spring Repair in Kansas City</h2>
+  <p class="text-blue-100 mb-6 max-w-md mx-auto text-sm">Call or text — we pick up. Serving the entire KC metro, Missouri and Kansas side.</p>
+  <a href="tel:8162899600"
+     class="inline-flex items-center gap-2 bg-white text-brand font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors shadow-lg text-sm">
+    <i class="fas fa-phone animate-ring"></i> 816.289.9600
+  </a>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="bg-gray-900 text-white pt-12 pb-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-[1.5fr_1fr_3fr_1fr] gap-12 mb-10">
+
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-black text-xl leading-none">N</div>
+          <div>
+            <div class="font-black text-lg leading-tight">Nate's Door Service</div>
+            <div class="text-xs text-gray-400">Excellence in Every Installation</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Kansas City's trusted garage door experts since 2010. Serving the entire KC metro with pride, integrity, and craftsmanship.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="/#services"     class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="/#about"        class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="/#testimonials" class="hover:text-white transition-colors">Reviews</a></li>
+          <li><a href="/#service-area" class="hover:text-white transition-colors">Service Area</a></li>
+          <li><a href="/#contact"      class="hover:text-white transition-colors">Contact</a></li>
+          <li><a href="/blog"          class="hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Contact</h4>
+        <ul class="space-y-2.5 text-sm text-gray-400">
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-phone text-brand-mid w-4"></i>
+            <a href="tel:8162899600" class="hover:text-white transition-colors">816.289.9600</a>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <i class="fas fa-envelope text-brand-mid w-4"></i>
+            <a href="mailto:contact@natesdoorservice.com" class="hover:text-white transition-colors">contact@natesdoorservice.com</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-map-marker-alt text-brand-mid w-4 mt-0.5"></i>
+            <span>Greater Kansas City Area – Missouri &amp; Kansas</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fas fa-clock text-brand-mid w-4 mt-0.5"></i>
+            <span>Mon–Sun 8AM–5PM<br /><span class="text-brand-mid font-medium">Emergency: 24/7</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold text-xs uppercase tracking-widest text-gray-300 mb-4">Follow Us</h4>
+        <div class="flex gap-2">
+          <a href="#" aria-label="Facebook"  class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+          <a href="#" aria-label="Google"    class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-google text-xs"></i></a>
+          <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-brand flex items-center justify-center text-gray-400 hover:text-white transition-all"><i class="fab fa-instagram text-xs"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+      &copy; 2026 Nate's Door Service. All rights reserved. &bull; Greater Kansas City Area – Missouri &amp; Kansas
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ STICKY BOTTOM BAR ═══════════════════════════ -->
+<div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-brand-dark border-t border-brand/30 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+  <div>
+    <p class="text-white font-bold text-sm">Need a spring replaced?</p>
+    <p class="text-blue-300 text-xs">Same-day service available</p>
+  </div>
+  <a href="tel:8162899600"
+     class="flex-shrink-0 bg-white text-brand font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 shadow-lg hover:bg-blue-50 transition-colors">
+    <i class="fas fa-phone animate-ring text-xs"></i> Call Now
+  </a>
+</div>
+
+<script>
+  const hamburger     = document.getElementById('hamburger');
+  const mobileMenu    = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Desktop Services dropdown
+  const servicesBtn      = document.getElementById('services-dropdown-btn');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const servicesIcon     = document.getElementById('services-dropdown-icon');
+  servicesBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = !servicesDropdown.classList.contains('hidden');
+    servicesDropdown.classList.toggle('hidden', isOpen);
+    servicesIcon.style.transform = isOpen ? '' : 'rotate(180deg)';
+  });
+  document.addEventListener('click', () => {
+    servicesDropdown.classList.add('hidden');
+    servicesIcon.style.transform = '';
+  });
+
+  // Mobile Services accordion
+  function toggleMobileServices() {
+    const menu = document.getElementById('mobile-services-menu');
+    const icon = document.getElementById('mobile-services-icon');
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden', isOpen);
+    icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburgerIcon.className = 'fas fa-bars text-2xl';
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer  = btn.nextElementSibling;
+      const icon    = btn.querySelector('i');
+      const isOpen  = answer.classList.contains('open');
+
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = '');
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

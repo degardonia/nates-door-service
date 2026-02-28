@@ -149,7 +149,21 @@
 
     <!-- Desktop nav links -->
     <div class="hidden lg:flex items-center gap-6">
-      <a href="/#services"     class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Services</a>
+
+      <!-- Services dropdown -->
+      <div class="relative" id="services-dropdown-wrapper">
+        <button id="services-dropdown-btn"
+                class="text-gray-600 hover:text-brand font-medium text-sm transition-colors flex items-center gap-1.5">
+          Services <i class="fas fa-chevron-down text-xs transition-transform" id="services-dropdown-icon"></i>
+        </button>
+        <div id="services-dropdown"
+             class="hidden absolute top-full left-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+          <a href="/services/spring-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
+          <a href="/services/opener-repair"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+          <a href="/services/garage-door-repair" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
+        </div>
+      </div>
+
       <a href="/#gallery"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Gallery</a>
       <a href="/#about"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About</a>
       <a href="/#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
@@ -173,7 +187,12 @@
   <!-- Mobile dropdown menu -->
   <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
     <nav class="flex flex-col gap-1">
-      <a href="/#services"     onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Services</a>
+      <div class="border-b border-gray-100 pb-1 mb-0.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 pt-2.5 pb-1.5 px-0.5">Services</p>
+        <a href="/services/spring-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
+        <a href="/services/opener-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+        <a href="/services/garage-door-repair" onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-700 hover:text-brand py-2 text-sm"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
+      </div>
       <a href="/#gallery"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Gallery</a>
       <a href="/#about"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Us</a>
       <a href="/#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
@@ -541,6 +560,30 @@
     hamburgerIcon.className = isOpen ? 'fas fa-bars text-2xl' : 'fas fa-times text-2xl';
     hamburger.setAttribute('aria-expanded', String(!isOpen));
   });
+
+  // Desktop Services dropdown
+  const servicesBtn      = document.getElementById('services-dropdown-btn');
+  const servicesDropdown = document.getElementById('services-dropdown');
+  const servicesIcon     = document.getElementById('services-dropdown-icon');
+  servicesBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const isOpen = !servicesDropdown.classList.contains('hidden');
+    servicesDropdown.classList.toggle('hidden', isOpen);
+    servicesIcon.style.transform = isOpen ? '' : 'rotate(180deg)';
+  });
+  document.addEventListener('click', () => {
+    servicesDropdown.classList.add('hidden');
+    servicesIcon.style.transform = '';
+  });
+
+  // Mobile Services accordion
+  function toggleMobileServices() {
+    const menu = document.getElementById('mobile-services-menu');
+    const icon = document.getElementById('mobile-services-icon');
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden', isOpen);
+    icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+  }
 
   function closeMobileMenu() {
     mobileMenu.classList.add('hidden');
