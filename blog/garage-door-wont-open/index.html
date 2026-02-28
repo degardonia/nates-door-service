@@ -166,13 +166,37 @@
         </div>
       </div>
 
-      <a href="/#gallery"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Gallery</a>
-      <a href="/about-nate"        class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">About Nate</a>
-      <a href="/#testimonials" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Reviews</a>
-      <a href="/garage-door-service-areas-kansas-city" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Area</a>
-      <a href="/#faq"          class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">FAQ</a>
-      <a href="/#contact"      class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
-      <a href="/blog"          class="text-brand font-semibold text-sm transition-colors">Blog</a>
+
+      <a href="/garage-door-service-areas-kansas-city" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Service Areas</a>
+
+      <!-- About dropdown -->
+      <div class="relative" id="about-dropdown-wrapper">
+        <button id="about-dropdown-btn"
+                class="text-gray-600 hover:text-brand font-medium text-sm transition-colors flex items-center gap-1.5">
+          About <i class="fas fa-chevron-down text-xs transition-transform" id="about-dropdown-icon"></i>
+        </button>
+        <div id="about-dropdown"
+             class="hidden absolute top-full left-0 mt-3 w-48 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+          <a href="/about-nate"   class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-user w-4 text-brand-mid text-xs"></i> About Nate</a>
+          <a href="/#testimonials" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-star w-4 text-brand-mid text-xs"></i> Reviews</a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="relative" id="resources-dropdown-wrapper">
+        <button id="resources-dropdown-btn"
+                class="text-gray-600 hover:text-brand font-medium text-sm transition-colors flex items-center gap-1.5">
+          Resources <i class="fas fa-chevron-down text-xs transition-transform" id="resources-dropdown-icon"></i>
+        </button>
+        <div id="resources-dropdown"
+             class="hidden absolute top-full left-0 mt-3 w-52 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+          <a href="/blog"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-newspaper w-4 text-brand-mid text-xs"></i> Blog</a>
+          <a href="/#faq"      class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-question-circle w-4 text-brand-mid text-xs"></i> FAQ</a>
+          <a href="/#gallery"  class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-light hover:text-brand transition-colors"><i class="fas fa-images w-4 text-brand-mid text-xs"></i> Gallery</a>
+        </div>
+      </div>
+
+      <a href="/#contact" class="text-gray-600 hover:text-brand font-medium text-sm transition-colors">Contact</a>
       <a href="tel:8162899600"
          class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full font-semibold text-sm transition-colors flex items-center gap-2 shadow-sm">
         <i class="fas fa-phone animate-ring text-xs"></i> Call Now
@@ -189,26 +213,47 @@
   <!-- Mobile dropdown menu -->
   <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-4 pb-5 pt-3 z-50">
     <nav class="flex flex-col gap-1">
+
       <div>
-        <button onclick="toggleMobileServices()" id="mobile-services-btn"
+        <button onclick="toggleMobileAccordion('mobile-services-menu','mobile-services-icon')"
                 class="w-full text-left text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm flex items-center gap-1.5">
           Services <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="mobile-services-icon"></i>
         </button>
         <div id="mobile-services-menu" class="hidden pl-4 py-1 space-y-0.5">
-          <a href="/services/spring-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Repair</a>
-          <a href="/services/opener-repair"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
-          <a href="/services/garage-door-repair"       onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Door Repair</a>
-          <a href="/services/garage-door-installation" onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-home w-4 text-brand-mid text-xs"></i> Door Installation</a>
-          <a href="/services/commercial"               onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-building w-4 text-brand-mid text-xs"></i> Commercial</a>
+          <a href="/services/garage-door-repair"       onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-door-open w-4 text-brand-mid text-xs"></i> Garage Door Repair</a>
+          <a href="/services/spring-repair"            onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-tools w-4 text-brand-mid text-xs"></i> Spring Replacement</a>
+          <a href="/services/opener-repair"            onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-cog w-4 text-brand-mid text-xs"></i> Opener Repair</a>
+          <a href="/services/garage-door-installation" onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-home w-4 text-brand-mid text-xs"></i> Installation &amp; Replacement</a>
+          <a href="/services/commercial"               onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-building w-4 text-brand-mid text-xs"></i> Commercial Doors</a>
         </div>
       </div>
-      <a href="/#gallery"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Gallery</a>
-      <a href="/about-nate"        onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">About Nate</a>
-      <a href="/#testimonials" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Reviews</a>
-      <a href="/garage-door-service-areas-kansas-city" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Area</a>
-      <a href="/#faq"          onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">FAQ</a>
-      <a href="/#contact"      onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
-      <a href="/blog"          onclick="closeMobileMenu()" class="text-brand font-semibold py-2.5 border-b border-gray-50 text-sm">Blog</a>
+
+      <a href="/garage-door-service-areas-kansas-city" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Service Areas</a>
+
+      <div>
+        <button onclick="toggleMobileAccordion('mobile-about-menu','mobile-about-icon')"
+                class="w-full text-left text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm flex items-center gap-1.5">
+          About <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="mobile-about-icon"></i>
+        </button>
+        <div id="mobile-about-menu" class="hidden pl-4 py-1 space-y-0.5">
+          <a href="/about-nate"      onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-user w-4 text-brand-mid text-xs"></i> About Nate</a>
+          <a href="/#testimonials"   onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-star w-4 text-brand-mid text-xs"></i> Reviews</a>
+        </div>
+      </div>
+
+      <div>
+        <button onclick="toggleMobileAccordion('mobile-resources-menu','mobile-resources-icon')"
+                class="w-full text-left text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm flex items-center gap-1.5">
+          Resources <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="mobile-resources-icon"></i>
+        </button>
+        <div id="mobile-resources-menu" class="hidden pl-4 py-1 space-y-0.5">
+          <a href="/blog"           onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-newspaper w-4 text-brand-mid text-xs"></i> Blog</a>
+          <a href="/#faq"           onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-question-circle w-4 text-brand-mid text-xs"></i> FAQ</a>
+          <a href="/#gallery"       onclick="closeMobileMenu()" class="flex items-center gap-2 text-gray-600 hover:text-brand py-2 text-sm border-b border-gray-50"><i class="fas fa-images w-4 text-brand-mid text-xs"></i> Gallery</a>
+        </div>
+      </div>
+
+      <a href="/#contact" onclick="closeMobileMenu()" class="text-gray-700 hover:text-brand font-medium py-2.5 border-b border-gray-50 text-sm">Contact</a>
       <a href="tel:8162899600"
          class="mt-2 bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-xl font-semibold text-center text-sm transition-colors flex items-center justify-center gap-2">
         <i class="fas fa-phone animate-ring"></i> 816.289.9600
@@ -570,37 +615,56 @@
     hamburger.setAttribute('aria-expanded', String(!isOpen));
   });
 
-  // Desktop Services dropdown
-  const servicesBtn      = document.getElementById('services-dropdown-btn');
-  const servicesDropdown = document.getElementById('services-dropdown');
-  const servicesIcon     = document.getElementById('services-dropdown-icon');
-  servicesBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    const isOpen = !servicesDropdown.classList.contains('hidden');
-    servicesDropdown.classList.toggle('hidden', isOpen);
-    servicesIcon.style.transform = isOpen ? '' : 'rotate(180deg)';
-  });
-  document.addEventListener('click', () => {
-    servicesDropdown.classList.add('hidden');
-    servicesIcon.style.transform = '';
+  function closeAllDropdowns() {
+    ['services','about','resources'].forEach(name => {
+      const dd = document.getElementById(name + '-dropdown');
+      const ic = document.getElementById(name + '-dropdown-icon');
+      if (dd) dd.classList.add('hidden');
+      if (ic) ic.style.transform = '';
+    });
+  }
+
+  ['services','about','resources'].forEach(name => {
+    const btn = document.getElementById(name + '-dropdown-btn');
+    if (!btn) return;
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const dd   = document.getElementById(name + '-dropdown');
+      const ic   = document.getElementById(name + '-dropdown-icon');
+      const open = !dd.classList.contains('hidden');
+      closeAllDropdowns();
+      if (!open) { dd.classList.remove('hidden'); ic.style.transform = 'rotate(180deg)'; }
+    });
   });
 
-  // Mobile Services accordion
-  function toggleMobileServices() {
-    const menu = document.getElementById('mobile-services-menu');
-    const icon = document.getElementById('mobile-services-icon');
-    const isOpen = !menu.classList.contains('hidden');
-    menu.classList.toggle('hidden', isOpen);
-    icon.style.transform = isOpen ? '' : 'rotate(180deg)';
-  }
+  document.addEventListener('click', e => {
+    closeAllDropdowns();
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMobileMenu();
+  });
 
   function closeMobileMenu() {
     mobileMenu.classList.add('hidden');
-    hamburgerIcon.className = 'fas fa-bars text-2xl';
     hamburger.setAttribute('aria-expanded', 'false');
-    const sm = document.getElementById('mobile-services-menu');
-    const si = document.getElementById('mobile-services-icon');
-    if (sm) { sm.classList.add('hidden'); si.style.transform = ''; }
+    hamburgerIcon.className = 'fas fa-bars text-2xl';
+    ['mobile-services-menu','mobile-about-menu','mobile-resources-menu'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.classList.add('hidden');
+    });
+    ['mobile-services-icon','mobile-about-icon','mobile-resources-icon'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.style.transform = '';
+    });
+  }
+
+  function toggleMobileAccordion(menuId, iconId) {
+    const menu   = document.getElementById(menuId);
+    const icon   = document.getElementById(iconId);
+    const isOpen = !menu.classList.contains('hidden');
+    ['mobile-services-menu','mobile-about-menu','mobile-resources-menu'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.classList.add('hidden');
+    });
+    ['mobile-services-icon','mobile-about-icon','mobile-resources-icon'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.style.transform = '';
+    });
+    if (!isOpen) { menu.classList.remove('hidden'); icon.style.transform = 'rotate(180deg)'; }
   }
 </script>
 
