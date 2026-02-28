@@ -1475,6 +1475,12 @@
           status.className = 'text-center text-xs text-green-600 font-semibold';
           status.textContent = '✓ Message sent! We\'ll be in touch within 1 hour.';
           form.reset();
+          if (typeof gtag === 'function') {
+            gtag('event', 'form_submit', {
+              event_category: 'lead',
+              event_label: 'contact_form'
+            });
+          }
         } else {
           throw new Error('server');
         }
