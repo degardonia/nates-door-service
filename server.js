@@ -92,6 +92,11 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+/* About Nate page */
+app.get('/about-nate', (req, res) => {
+  res.sendFile(path.join(__dirname, 'about-nate', 'index.html'));
+});
+
 /* Service areas page */
 app.get('/garage-door-service-areas-kansas-city', (req, res) => {
   res.sendFile(path.join(__dirname, 'garage-door-service-areas-kansas-city', 'index.html'));
