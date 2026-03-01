@@ -1458,6 +1458,7 @@
 
     form.addEventListener('submit', async e => {
       e.preventDefault();
+      console.log('[GA4 Debug] Submit handler fired for:', formId);
 
       const data = Object.fromEntries(new FormData(form));
       const btn  = form.querySelector('button[type="submit"]');
@@ -1465,6 +1466,7 @@
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
 
       try {
+        console.log('[GA4 Debug] Fetch starting for:', formId);
         const res = await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1472,19 +1474,30 @@
         });
 
         if (res.ok) {
+          console.log('[GA4 Debug] Fetch succeeded for:', formId);
           status.className = 'text-center text-xs text-green-600 font-semibold';
           status.textContent = '✓ Message sent! We\'ll be in touch within 1 hour.';
           form.reset();
+
+          console.log('[GA4 Debug] About to fire gtag event. typeof gtag =', typeof gtag);
           if (typeof gtag === 'function') {
             gtag('event', 'form_submit', {
               event_category: 'lead',
-              event_label: 'contact_form'
+              event_label: 'contact_form',
+              form_name: formId
             });
+            console.log('[GA4 Debug] gtag event fired for:', formId);
+          } else {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'form_submit', form_name: formId });
+            console.log('[GA4 Debug] gtag unavailable — pushed to dataLayer for:', formId);
           }
         } else {
+          console.log('[GA4 Debug] Fetch failed (non-ok response) for:', formId, 'status:', res.status);
           throw new Error('server');
         }
-      } catch {
+      } catch (err) {
+        console.log('[GA4 Debug] Fetch error for:', formId, err);
         status.className = 'text-center text-xs text-red-600';
         status.textContent = 'Something went wrong. Please call us directly at 816.289.9600.';
       } finally {
